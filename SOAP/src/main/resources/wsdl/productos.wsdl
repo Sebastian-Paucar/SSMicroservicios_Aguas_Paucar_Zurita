@@ -1,0 +1,61 @@
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:tns="http://espe.com/productos/ws"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             name="ProductosService"
+             targetNamespace="http://www.example.com/productos/ws">
+
+    <types>
+        <xsd:schema targetNamespace="http://espe.com/productos/ws">
+            <xsd:element name="GetProductoRequest">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="idProducto" type="xsd:int"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="GetProductoResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="nombre" type="xsd:string"/>
+                        <xsd:element name="descripcion" type="xsd:string"/>
+                        <xsd:element name="precio" type="xsd:decimal"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </types>
+
+    <message name="GetProductoRequest">
+        <part name="parameters" element="tns:GetProductoRequest"/>
+    </message>
+    <message name="GetProductoResponse">
+        <part name="parameters" element="tns:GetProductoResponse"/>
+    </message>
+
+    <portType name="ProductosPort">
+        <operation name="GetProducto">
+            <input message="tns:GetProductoRequest"/>
+            <output message="tns:GetProductoResponse"/>
+        </operation>
+    </portType>
+
+    <binding name="ProductosBinding" type="tns:ProductosPort">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="GetProducto">
+            <soap:operation soapAction="http://espe.com/productos/ws/GetProducto"/>
+            <input>
+                <soap:body use="literal"/>
+            </input>
+            <output>
+                <soap:body use="literal"/>
+            </output>
+        </operation>
+    </binding>
+
+    <service name="ProductosService">
+        <port name="ProductosPort" binding="tns:ProductosBinding">
+            <soap:address location="http://localhost:8001/ws"/>
+        </port>
+    </service>
+</definitions>

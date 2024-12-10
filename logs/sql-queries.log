@@ -1,0 +1,3529 @@
+2024-11-29 03:17:16 - 
+    insert 
+    into
+        usuarios.usuarios
+        (direccion, email, imagen_perfil, nombre, password, perfil, telefono) 
+    values
+        (?, ?, ?, ?, ?, ?, ?) 
+    returning id_usuario
+2024-11-29 03:31:06 - 
+    select
+        r1_0.id_rol,
+        r1_0.nombre_rol 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.nombre_rol=?
+2024-11-29 03:31:06 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    left join
+        usuarios.tiene r1_0 
+            on u1_0.id_usuario=r1_0.id_usuario 
+    left join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        u1_0.id_usuario=?
+2024-11-29 03:31:06 - 
+    insert 
+    into
+        usuarios.usuarios
+        (direccion, email, imagen_perfil, nombre, password, perfil, telefono) 
+    values
+        (?, ?, ?, ?, ?, ?, ?) 
+    returning id_usuario
+2024-11-29 03:31:06 - 
+    insert 
+    into
+        usuarios.tiene
+        (id_usuario, id_rol) 
+    values
+        (?, ?)
+2024-11-29 05:21:59 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-11-29 05:21:59 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-11-29 06:54:15 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-11-29 06:54:15 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-11-29 06:54:40 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-11-29 06:54:40 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-11-29 06:58:26 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-11-29 06:58:26 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-11-29 06:59:02 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-11-29 06:59:02 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-11-29 07:05:18 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-11-29 07:05:18 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-11-29 07:07:09 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-11-29 07:07:09 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-02 07:45:02 - 
+    insert 
+    into
+        usuarios.usuarios
+        (direccion, email, imagen_perfil, nombre, password, perfil, telefono) 
+    values
+        (?, ?, ?, ?, ?, ?, ?) 
+    returning id_usuario
+2024-12-02 08:30:01 - 
+    select
+        r1_0.id_rol,
+        r1_0.nombre_rol 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.nombre_rol=?
+2024-12-02 08:30:02 - 
+    insert 
+    into
+        usuarios.usuarios
+        (direccion, email, imagen_perfil, nombre, password, perfil, telefono) 
+    values
+        (?, ?, ?, ?, ?, ?, ?) 
+    returning id_usuario
+2024-12-02 08:30:42 - 
+    select
+        r1_0.id_rol,
+        r1_0.nombre_rol 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.nombre_rol=?
+2024-12-02 08:30:42 - 
+    insert 
+    into
+        usuarios.usuarios
+        (direccion, email, imagen_perfil, nombre, password, perfil, telefono) 
+    values
+        (?, ?, ?, ?, ?, ?, ?) 
+    returning id_usuario
+2024-12-02 08:30:42 - 
+    insert 
+    into
+        usuarios.tiene
+        (id_usuario, id_rol) 
+    values
+        (?, ?)
+2024-12-02 09:26:41 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-02 09:26:41 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-02 10:01:06 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-02 10:01:06 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-02 23:31:24 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-02 23:31:24 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-03 01:02:10 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-03 01:02:10 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-03 02:27:00 - 
+    select
+        p1_0.id,
+        p1_0.categoria_id,
+        p1_0.descripcion,
+        p1_0.imagen,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2024-12-03 02:28:17 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-03 02:28:17 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-03 07:56:00 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-03 07:56:00 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-03 09:01:57 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-03 09:01:57 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-03 09:45:03 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-03 09:45:53 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-03 09:47:27 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-03 09:47:27 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-04 23:07:01 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-04 23:07:01 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-04 23:08:55 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-04 23:09:06 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-05 00:11:08 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-05 00:11:08 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-05 00:13:15 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-05 00:16:14 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-05 00:20:48 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-05 00:22:49 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-05 00:22:57 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-05 00:23:48 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-05 00:24:35 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-05 00:25:53 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-05 00:27:49 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-05 00:28:08 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-05 00:29:30 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-05 00:31:16 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-05 00:31:19 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-05 00:32:07 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-05 00:33:11 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-05 00:35:33 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-05 00:38:58 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-05 00:39:45 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-05 00:40:40 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-05 01:20:00 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-05 01:20:00 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-05 01:22:01 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-05 01:22:01 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-05 01:24:27 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-05 01:24:28 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-05 01:36:54 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-05 01:38:49 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-05 01:39:06 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-05 01:39:17 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-05 01:39:20 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-05 01:39:56 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-05 01:39:56 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-05 01:41:40 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-05 01:41:40 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-05 01:44:16 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-05 01:44:16 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-05 01:45:02 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 15:16:34 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-07 15:16:34 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-07 16:32:07 - 
+    select
+        u1_0.id_usuario,
+        u1_0.direccion,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuarios u1_0 
+    where
+        u1_0.email=?
+2024-12-07 16:32:07 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id_rol,
+        r1_1.nombre_rol 
+    from
+        usuarios.tiene r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id_rol=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-07 16:33:07 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:09 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:09 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:09 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:09 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:10 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:10 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:10 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:10 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:10 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:10 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:10 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:10 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:10 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:11 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:11 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:29 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:29 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:29 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:29 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:30 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:30 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:30 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:30 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:30 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:30 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:30 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:31 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:31 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:31 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:34:31 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:35:41 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:35:41 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:35:41 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:35:41 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:35:41 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:35:42 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:35:42 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:35:42 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:35:42 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:35:42 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:36:08 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:36:08 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:36:08 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:36:08 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:36:08 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:36:08 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:36:08 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:36:08 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:36:09 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:36:09 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:37:35 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:37:36 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:37:36 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:37:36 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:37:36 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:37:36 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:37:36 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:37:36 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:37:36 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:37:36 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:37:37 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:37:37 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:37:37 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:37:37 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-07 16:37:37 - 
+    select
+        c1_0.id,
+        c1_0.nombre 
+    from
+        productos.categorias c1_0
+2024-12-08 17:19:15 - 
+    select
+        r1_0.id_rol,
+        r1_0.nombre_rol 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.nombre_rol is null
+2024-12-08 17:19:15 - 
+    insert 
+    into
+        usuarios.role
+        (nombre_rol) 
+    values
+        (?) 
+    returning id_rol
+2024-12-08 17:19:27 - 
+    select
+        r1_0.id_rol,
+        r1_0.nombre_rol 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.nombre_rol is null
+2024-12-08 17:19:27 - 
+    insert 
+    into
+        usuarios.role
+        (nombre_rol) 
+    values
+        (?) 
+    returning id_rol
+2024-12-08 17:20:43 - 
+    select
+        r1_0.id_rol,
+        r1_0.nombre_rol 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.nombre_rol is null
+2024-12-08 17:20:43 - 
+    insert 
+    into
+        usuarios.role
+        (nombre_rol) 
+    values
+        (?) 
+    returning id_rol
+2024-12-08 17:28:18 - 
+    select
+        r1_0.id_rol,
+        r1_0.nombre_rol 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.nombre_rol is null
+2024-12-08 17:28:18 - 
+    insert 
+    into
+        usuarios.role
+        (nombre_rol) 
+    values
+        (?) 
+    returning id_rol
+2024-12-08 17:31:21 - 
+    select
+        r1_0.id_rol,
+        r1_0.nombre_rol 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.nombre_rol=?
+2024-12-08 17:31:21 - 
+    insert 
+    into
+        usuarios.usuario
+        (email, imagen_perfil, nombre, password, perfil, telefono) 
+    values
+        (?, ?, ?, ?, ?, ?) 
+    returning id_usuario
+2024-12-08 17:31:36 - 
+    select
+        r1_0.id_rol,
+        r1_0.nombre_rol 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.nombre_rol=?
+2024-12-08 17:31:36 - 
+    insert 
+    into
+        usuarios.usuario
+        (email, imagen_perfil, nombre, password, perfil, telefono) 
+    values
+        (?, ?, ?, ?, ?, ?) 
+    returning id_usuario
+2024-12-08 17:35:52 - 
+    select
+        r1_0.id_rol,
+        r1_0.nombre_rol 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.nombre_rol is null
+2024-12-08 17:35:52 - 
+    insert 
+    into
+        usuarios.role
+        (nombre_rol) 
+    values
+        (?) 
+    returning id_rol
+2024-12-08 17:41:41 - 
+    select
+        r1_0.id_rol,
+        r1_0.nombre_rol 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.nombre_rol is null
+2024-12-08 17:41:41 - 
+    insert 
+    into
+        usuarios.role
+        (nombre_rol) 
+    values
+        (?) 
+    returning id_rol
+2024-12-08 17:43:37 - 
+    select
+        r1_0.id_rol,
+        r1_0.nombre_rol 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.nombre_rol is null
+2024-12-08 17:43:37 - 
+    insert 
+    into
+        usuarios.role
+        (nombre_rol) 
+    values
+        (?) 
+    returning id_rol
+2024-12-08 17:45:03 - 
+    select
+        r1_0.id_rol,
+        r1_0.nombre_rol 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.nombre_rol is null
+2024-12-08 17:45:03 - 
+    insert 
+    into
+        usuarios.role
+        (nombre_rol) 
+    values
+        (?) 
+    returning id_rol
+2024-12-08 18:13:50 - 
+    select
+        r1_0.id_rol,
+        r1_0.nombre_rol 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.nombre_rol is null
+2024-12-08 18:13:50 - 
+    insert 
+    into
+        usuarios.role
+        (nombre_rol) 
+    values
+        (?) 
+    returning id_rol
+2024-12-08 18:13:56 - 
+    select
+        r1_0.id_rol,
+        r1_0.nombre_rol 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.nombre_rol is null
+2024-12-08 18:13:56 - 
+    insert 
+    into
+        usuarios.role
+        (nombre_rol) 
+    values
+        (?) 
+    returning id_rol
+2024-12-08 18:14:05 - 
+    select
+        r1_0.id_rol,
+        r1_0.nombre_rol 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.nombre_rol is null
+2024-12-08 18:14:05 - 
+    insert 
+    into
+        usuarios.role
+        (nombre_rol) 
+    values
+        (?) 
+    returning id_rol
+2024-12-08 18:25:11 - 
+    select
+        r1_0.id,
+        r1_0.role 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.role is null
+2024-12-08 18:25:11 - 
+    insert 
+    into
+        usuarios.role
+        (role) 
+    values
+        (?) 
+    returning id
+2024-12-08 18:28:37 - 
+    select
+        r1_0.id,
+        r1_0.role 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.role=?
+2024-12-08 18:28:37 - 
+    select
+        r1_0.id,
+        r1_0.role 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.role=?
+2024-12-08 18:28:37 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    left join
+        usuarios.rol_usuario r1_0 
+            on u1_0.id_usuario=r1_0.id_usuario 
+    left join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        u1_0.id_usuario=?
+2024-12-08 18:28:37 - 
+    insert 
+    into
+        usuarios.usuario
+        (email, imagen_perfil, nombre, password, perfil, telefono) 
+    values
+        (?, ?, ?, ?, ?, ?) 
+    returning id_usuario
+2024-12-08 18:28:37 - 
+    insert 
+    into
+        usuarios.rol_usuario
+        (id_usuario, id_rol) 
+    values
+        (?, ?)
+2024-12-08 18:28:37 - 
+    insert 
+    into
+        usuarios.rol_usuario
+        (id_usuario, id_rol) 
+    values
+        (?, ?)
+2024-12-08 18:28:50 - 
+    select
+        r1_0.id,
+        r1_0.role 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.role=?
+2024-12-08 18:28:50 - 
+    select
+        r1_0.id,
+        r1_0.role 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.role=?
+2024-12-08 18:28:50 - 
+    insert 
+    into
+        usuarios.usuario
+        (email, imagen_perfil, nombre, password, perfil, telefono) 
+    values
+        (?, ?, ?, ?, ?, ?) 
+    returning id_usuario
+2024-12-08 18:28:50 - 
+    insert 
+    into
+        usuarios.rol_usuario
+        (id_usuario, id_rol) 
+    values
+        (?, ?)
+2024-12-08 18:28:50 - 
+    insert 
+    into
+        usuarios.rol_usuario
+        (id_usuario, id_rol) 
+    values
+        (?, ?)
+2024-12-08 18:29:01 - 
+    select
+        r1_0.id,
+        r1_0.role 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.role=?
+2024-12-08 18:29:01 - 
+    select
+        r1_0.id,
+        r1_0.role 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.role=?
+2024-12-08 18:29:01 - 
+    insert 
+    into
+        usuarios.usuario
+        (email, imagen_perfil, nombre, password, perfil, telefono) 
+    values
+        (?, ?, ?, ?, ?, ?) 
+    returning id_usuario
+2024-12-08 18:29:01 - 
+    insert 
+    into
+        usuarios.rol_usuario
+        (id_usuario, id_rol) 
+    values
+        (?, ?)
+2024-12-08 18:29:01 - 
+    insert 
+    into
+        usuarios.rol_usuario
+        (id_usuario, id_rol) 
+    values
+        (?, ?)
+2024-12-08 18:35:29 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2024-12-08 18:35:29 - 
+    select
+        r1_0.id,
+        r1_0.role 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.role=?
+2024-12-08 18:35:29 - 
+    select
+        r1_0.id,
+        r1_0.role 
+    from
+        usuarios.role r1_0 
+    where
+        r1_0.role=?
+2024-12-08 18:35:29 - 
+    insert 
+    into
+        usuarios.usuario
+        (email, imagen_perfil, nombre, password, perfil, telefono) 
+    values
+        (?, ?, ?, ?, ?, ?) 
+    returning id_usuario
+2024-12-08 18:35:29 - 
+    insert 
+    into
+        usuarios.rol_usuario
+        (id_usuario, id_rol) 
+    values
+        (?, ?)
+2024-12-08 18:35:29 - 
+    insert 
+    into
+        usuarios.rol_usuario
+        (id_usuario, id_rol) 
+    values
+        (?, ?)
+2024-12-08 18:35:33 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2024-12-08 18:35:33 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-08 19:54:02 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0
+2024-12-08 19:54:02 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-08 20:09:08 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    left join
+        usuarios.rol_usuario r1_0 
+            on u1_0.id_usuario=r1_0.id_usuario 
+    left join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        u1_0.id_usuario=?
+2024-12-08 20:09:08 - 
+    insert 
+    into
+        usuarios.direccion
+        (calle_principal, calle_secundaria, ciudad, codigo_postal, detalle, provincia) 
+    values
+        (?, ?, ?, ?, ?, ?) 
+    returning id_direccion
+2024-12-08 20:09:08 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2024-12-08 20:09:08 - 
+    insert 
+    into
+        usuarios.asocia
+        (id_usuario, id_direccion) 
+    values
+        (?, ?)
+2024-12-08 22:01:29 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2024-12-08 22:01:29 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-08 22:01:29 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2024-12-08 22:01:30 - 
+    select
+        u1_0.id_direccion,
+        u1_1.id_usuario,
+        u1_1.email,
+        u1_1.imagen_perfil,
+        u1_1.nombre,
+        u1_1.password,
+        u1_1.perfil,
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role,
+        u1_1.telefono 
+    from
+        usuarios.asocia u1_0 
+    join
+        usuarios.usuario u1_1 
+            on u1_1.id_usuario=u1_0.id_usuario 
+    left join
+        usuarios.rol_usuario r1_0 
+            on u1_1.id_usuario=r1_0.id_usuario 
+    left join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        u1_0.id_direccion=?
+2024-12-08 22:03:06 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0
+2024-12-08 22:03:06 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-08 22:03:06 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2024-12-08 22:03:06 - 
+    select
+        u1_0.id_direccion,
+        u1_1.id_usuario,
+        u1_1.email,
+        u1_1.imagen_perfil,
+        u1_1.nombre,
+        u1_1.password,
+        u1_1.perfil,
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role,
+        u1_1.telefono 
+    from
+        usuarios.asocia u1_0 
+    join
+        usuarios.usuario u1_1 
+            on u1_1.id_usuario=u1_0.id_usuario 
+    left join
+        usuarios.rol_usuario r1_0 
+            on u1_1.id_usuario=r1_0.id_usuario 
+    left join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        u1_0.id_direccion=?
+2024-12-08 22:03:42 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0
+2024-12-08 22:03:42 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-08 22:03:42 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2024-12-08 22:03:42 - 
+    select
+        u1_0.id_direccion,
+        u1_1.id_usuario,
+        u1_1.email,
+        u1_1.imagen_perfil,
+        u1_1.nombre,
+        u1_1.password,
+        u1_1.perfil,
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role,
+        u1_1.telefono 
+    from
+        usuarios.asocia u1_0 
+    join
+        usuarios.usuario u1_1 
+            on u1_1.id_usuario=u1_0.id_usuario 
+    left join
+        usuarios.rol_usuario r1_0 
+            on u1_1.id_usuario=r1_0.id_usuario 
+    left join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        u1_0.id_direccion=?
+2024-12-08 22:07:34 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0
+2024-12-08 22:07:34 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-08 22:07:35 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2024-12-08 22:08:32 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0
+2024-12-08 22:08:32 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-08 22:08:32 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2024-12-08 22:28:35 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    left join
+        usuarios.rol_usuario r1_0 
+            on u1_0.id_usuario=r1_0.id_usuario 
+    left join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        u1_0.id_usuario=?
+2024-12-08 22:28:35 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2024-12-08 22:30:45 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    left join
+        usuarios.rol_usuario r1_0 
+            on u1_0.id_usuario=r1_0.id_usuario 
+    left join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        u1_0.id_usuario=?
+2024-12-08 22:30:45 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2024-12-08 23:55:47 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-08 23:56:35 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.estado,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.imagen,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2024-12-09 00:00:37 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2024-12-09 00:00:37 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-09 00:00:37 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2024-12-09 00:03:09 - 
+    insert 
+    into
+        productos.categorias
+        (nombre_categoria) 
+    values
+        (?) 
+    returning id_categoria
+2024-12-09 00:03:31 - 
+    insert 
+    into
+        productos.categorias
+        (nombre_categoria) 
+    values
+        (?) 
+    returning id_categoria
+2024-12-09 00:03:41 - 
+    insert 
+    into
+        productos.categorias
+        (nombre_categoria) 
+    values
+        (?) 
+    returning id_categoria
+2024-12-09 00:05:22 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 00:05:22 - 
+    select
+        p1_0.id_categoria,
+        p1_1.id_producto,
+        p1_1.cantidad,
+        p1_1.descripcion,
+        p1_1.estado,
+        p1_1.fecha_actualizacion,
+        p1_1.fecha_creacion,
+        p1_1.imagen,
+        p1_1.nombre,
+        p1_1.precio 
+    from
+        productos.asocia p1_0 
+    join
+        productos.productos p1_1 
+            on p1_1.id_producto=p1_0.id_producto 
+    where
+        p1_0.id_categoria=?
+2024-12-09 00:05:22 - 
+    select
+        p1_0.id_categoria,
+        p1_1.id_producto,
+        p1_1.cantidad,
+        p1_1.descripcion,
+        p1_1.estado,
+        p1_1.fecha_actualizacion,
+        p1_1.fecha_creacion,
+        p1_1.imagen,
+        p1_1.nombre,
+        p1_1.precio 
+    from
+        productos.asocia p1_0 
+    join
+        productos.productos p1_1 
+            on p1_1.id_producto=p1_0.id_producto 
+    where
+        p1_0.id_categoria=?
+2024-12-09 00:05:22 - 
+    select
+        p1_0.id_categoria,
+        p1_1.id_producto,
+        p1_1.cantidad,
+        p1_1.descripcion,
+        p1_1.estado,
+        p1_1.fecha_actualizacion,
+        p1_1.fecha_creacion,
+        p1_1.imagen,
+        p1_1.nombre,
+        p1_1.precio 
+    from
+        productos.asocia p1_0 
+    join
+        productos.productos p1_1 
+            on p1_1.id_producto=p1_0.id_producto 
+    where
+        p1_0.id_categoria=?
+2024-12-09 00:05:29 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.estado,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.imagen,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2024-12-09 00:05:44 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.estado,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.imagen,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2024-12-09 00:08:00 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.estado,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.imagen,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2024-12-09 00:09:29 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.estado,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.imagen,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2024-12-09 00:09:32 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 00:09:32 - 
+    select
+        p1_0.id_categoria,
+        p1_1.id_producto,
+        p1_1.cantidad,
+        p1_1.descripcion,
+        p1_1.estado,
+        p1_1.fecha_actualizacion,
+        p1_1.fecha_creacion,
+        p1_1.imagen,
+        p1_1.nombre,
+        p1_1.precio 
+    from
+        productos.asocia p1_0 
+    join
+        productos.productos p1_1 
+            on p1_1.id_producto=p1_0.id_producto 
+    where
+        p1_0.id_categoria=?
+2024-12-09 00:09:32 - 
+    select
+        p1_0.id_categoria,
+        p1_1.id_producto,
+        p1_1.cantidad,
+        p1_1.descripcion,
+        p1_1.estado,
+        p1_1.fecha_actualizacion,
+        p1_1.fecha_creacion,
+        p1_1.imagen,
+        p1_1.nombre,
+        p1_1.precio 
+    from
+        productos.asocia p1_0 
+    join
+        productos.productos p1_1 
+            on p1_1.id_producto=p1_0.id_producto 
+    where
+        p1_0.id_categoria=?
+2024-12-09 00:09:32 - 
+    select
+        p1_0.id_categoria,
+        p1_1.id_producto,
+        p1_1.cantidad,
+        p1_1.descripcion,
+        p1_1.estado,
+        p1_1.fecha_actualizacion,
+        p1_1.fecha_creacion,
+        p1_1.imagen,
+        p1_1.nombre,
+        p1_1.precio 
+    from
+        productos.asocia p1_0 
+    join
+        productos.productos p1_1 
+            on p1_1.id_producto=p1_0.id_producto 
+    where
+        p1_0.id_categoria=?
+2024-12-09 00:11:49 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 00:11:49 - 
+    select
+        p1_0.id_categoria,
+        p1_1.id_producto,
+        p1_1.cantidad,
+        p1_1.descripcion,
+        p1_1.estado,
+        p1_1.fecha_actualizacion,
+        p1_1.fecha_creacion,
+        p1_1.imagen,
+        p1_1.nombre,
+        p1_1.precio 
+    from
+        productos.asocia p1_0 
+    join
+        productos.productos p1_1 
+            on p1_1.id_producto=p1_0.id_producto 
+    where
+        p1_0.id_categoria=?
+2024-12-09 00:11:49 - 
+    select
+        p1_0.id_categoria,
+        p1_1.id_producto,
+        p1_1.cantidad,
+        p1_1.descripcion,
+        p1_1.estado,
+        p1_1.fecha_actualizacion,
+        p1_1.fecha_creacion,
+        p1_1.imagen,
+        p1_1.nombre,
+        p1_1.precio 
+    from
+        productos.asocia p1_0 
+    join
+        productos.productos p1_1 
+            on p1_1.id_producto=p1_0.id_producto 
+    where
+        p1_0.id_categoria=?
+2024-12-09 00:11:49 - 
+    select
+        p1_0.id_categoria,
+        p1_1.id_producto,
+        p1_1.cantidad,
+        p1_1.descripcion,
+        p1_1.estado,
+        p1_1.fecha_actualizacion,
+        p1_1.fecha_creacion,
+        p1_1.imagen,
+        p1_1.nombre,
+        p1_1.precio 
+    from
+        productos.asocia p1_0 
+    join
+        productos.productos p1_1 
+            on p1_1.id_producto=p1_0.id_producto 
+    where
+        p1_0.id_categoria=?
+2024-12-09 00:11:51 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.estado,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.imagen,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2024-12-09 00:15:16 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.estado,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.imagen,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2024-12-09 00:19:33 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.estado,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.imagen,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2024-12-09 00:22:23 - 
+    insert 
+    into
+        productos.productos
+        (cantidad, descripcion, estado, fecha_actualizacion, fecha_creacion, imagen, nombre, precio) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id_producto
+2024-12-09 00:22:23 - 
+    insert 
+    into
+        productos.asocia
+        (id_producto, id_categoria) 
+    values
+        (?, ?)
+2024-12-09 00:22:23 - 
+    insert 
+    into
+        productos.asocia
+        (id_producto, id_categoria) 
+    values
+        (?, ?)
+2024-12-09 00:22:45 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.estado,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.imagen,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2024-12-09 00:22:45 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2024-12-09 00:22:45 - 
+    select
+        p1_0.id_categoria,
+        p1_1.id_producto,
+        p1_1.cantidad,
+        p1_1.descripcion,
+        p1_1.estado,
+        p1_1.fecha_actualizacion,
+        p1_1.fecha_creacion,
+        p1_1.imagen,
+        p1_1.nombre,
+        p1_1.precio 
+    from
+        productos.asocia p1_0 
+    join
+        productos.productos p1_1 
+            on p1_1.id_producto=p1_0.id_producto 
+    where
+        p1_0.id_categoria=?
+2024-12-09 00:23:06 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 00:23:06 - 
+    select
+        p1_0.id_categoria,
+        p1_1.id_producto,
+        p1_1.cantidad,
+        p1_1.descripcion,
+        p1_1.estado,
+        p1_1.fecha_actualizacion,
+        p1_1.fecha_creacion,
+        p1_1.imagen,
+        p1_1.nombre,
+        p1_1.precio 
+    from
+        productos.asocia p1_0 
+    join
+        productos.productos p1_1 
+            on p1_1.id_producto=p1_0.id_producto 
+    where
+        p1_0.id_categoria=?
+2024-12-09 00:23:06 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2024-12-09 00:25:02 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 00:25:16 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.estado,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.imagen,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2024-12-09 00:25:16 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2024-12-09 00:33:23 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 00:35:02 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.estado,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.imagen,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2024-12-09 00:35:02 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2024-12-09 00:36:38 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.estado,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.imagen,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2024-12-09 00:36:38 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2024-12-09 00:36:41 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.estado,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.imagen,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2024-12-09 00:36:41 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2024-12-09 00:38:48 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.estado,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.imagen,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0 
+    join
+        productos.asocia c1_0 
+            on p1_0.id_producto=c1_0.id_producto 
+    where
+        c1_0.id_categoria=?
+2024-12-09 00:38:48 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2024-12-09 00:39:51 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 00:42:28 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 00:42:33 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.estado,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.imagen,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0 
+    join
+        productos.asocia c1_0 
+            on p1_0.id_producto=c1_0.id_producto 
+    where
+        c1_0.id_categoria=?
+2024-12-09 00:42:33 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2024-12-09 00:42:40 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 00:43:07 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 00:43:10 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.estado,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.imagen,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0 
+    join
+        productos.asocia c1_0 
+            on p1_0.id_producto=c1_0.id_producto 
+    where
+        c1_0.id_categoria=?
+2024-12-09 00:43:10 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2024-12-09 00:43:14 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.estado,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.imagen,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0 
+    join
+        productos.asocia c1_0 
+            on p1_0.id_producto=c1_0.id_producto 
+    where
+        c1_0.id_categoria=?
+2024-12-09 00:43:14 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2024-12-09 00:43:21 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 02:25:10 - alter table if exists carrito.carrito_producto alter column precio_unitario set data type numeric(38,2)
+2024-12-09 02:25:10 - alter table if exists carrito.carrito_producto alter column subtotal set data type numeric(38,2)
+2024-12-09 22:17:27 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2024-12-09 22:17:27 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-09 22:17:27 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2024-12-09 22:19:38 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    left join
+        usuarios.rol_usuario r1_0 
+            on u1_0.id_usuario=r1_0.id_usuario 
+    left join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        u1_0.id_usuario=?
+2024-12-09 22:19:38 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2024-12-09 22:21:11 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 22:21:18 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.estado,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.imagen,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2024-12-09 22:21:18 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2024-12-09 22:21:22 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.estado,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.imagen,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0 
+    join
+        productos.asocia c1_0 
+            on p1_0.id_producto=c1_0.id_producto 
+    where
+        c1_0.id_categoria=?
+2024-12-09 22:21:22 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2024-12-09 22:38:23 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 22:38:24 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 22:38:24 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 22:38:24 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 22:38:24 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 22:38:24 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 22:38:24 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 22:38:24 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 22:38:24 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 22:38:25 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 22:38:25 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 22:38:25 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 22:38:25 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 22:38:25 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 22:38:25 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 22:38:25 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 22:38:26 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 22:38:26 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 22:38:26 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 22:38:26 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 22:38:26 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-09 22:59:32 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0
+2024-12-09 22:59:32 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-09 22:59:32 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2024-12-10 09:48:09 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2024-12-10 09:48:09 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2024-12-10 09:48:09 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2024-12-10 09:49:57 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    left join
+        usuarios.rol_usuario r1_0 
+            on u1_0.id_usuario=r1_0.id_usuario 
+    left join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        u1_0.id_usuario=?
+2024-12-10 09:49:57 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2024-12-10 09:53:28 - 
+    insert 
+    into
+        productos.productos
+        (cantidad, descripcion, estado, fecha_actualizacion, fecha_creacion, imagen, nombre, precio) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id_producto
+2024-12-10 09:53:28 - 
+    insert 
+    into
+        productos.asocia
+        (id_producto, id_categoria) 
+    values
+        (?, ?)
+2024-12-10 09:53:28 - 
+    insert 
+    into
+        productos.asocia
+        (id_producto, id_categoria) 
+    values
+        (?, ?)
+2024-12-10 09:56:40 - 
+    insert 
+    into
+        productos.productos
+        (cantidad, descripcion, estado, fecha_actualizacion, fecha_creacion, imagen, nombre, precio) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?) 
+    returning id_producto
+2024-12-10 10:01:37 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-10 10:01:37 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-10 10:01:37 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-10 10:01:37 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-10 10:01:37 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-10 10:01:37 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-10 10:01:37 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-10 10:01:38 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-10 10:01:38 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-10 10:01:38 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-10 10:01:38 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-10 10:01:38 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-10 10:01:38 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-10 10:01:38 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-10 10:01:38 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-10 10:01:39 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-10 10:01:39 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-10 10:01:39 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-10 10:01:39 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0
+2024-12-10 10:01:39 - 
+    select
+        c1_0.id_categoria,
+        c1_0.nombre_categoria 
+    from
+        productos.categorias c1_0

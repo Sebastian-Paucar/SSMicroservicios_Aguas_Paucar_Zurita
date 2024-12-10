@@ -1,0 +1,49 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://www.example.com/productos"
+           targetNamespace="http://www.example.com/productos"
+           elementFormDefault="qualified">
+
+    <xs:element name="GetProductoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="idProducto" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetProductoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="producto" type="tns:Producto"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="Producto">
+        <xs:sequence>
+            <xs:element name="idProducto" type="xs:int"/>
+            <xs:element name="nombre" type="xs:string"/>
+            <xs:element name="descripcion" type="xs:string"/>
+            <xs:element name="precio" type="xs:decimal"/>
+            <xs:element name="cantidad" type="xs:int"/>
+            <xs:element name="imagen" type="xs:string"/>
+            <xs:element name="estado" type="xs:string"/>
+            <xs:element name="fechaCreacion" type="xs:date"/>
+            <xs:element name="fechaActualizacion" type="xs:date"/>
+            <xs:element name="categorias" type="tns:CategoriaList"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Categoria">
+        <xs:sequence>
+            <xs:element name="idCategoria" type="xs:int"/>
+            <xs:element name="nombre" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="CategoriaList">
+        <xs:sequence>
+            <xs:element name="categoria" type="tns:Categoria" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
