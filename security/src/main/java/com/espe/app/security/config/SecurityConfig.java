@@ -50,6 +50,18 @@ public class SecurityConfig {
     @Value("${auth.server.issuer-uri}")
     private String issuerUri;
 
+    @Value("${client.id}")
+    private String clientId;
+
+    @Value("${client.secret}")
+    private String clientSecret;
+
+    @Value("${logout.uri}")
+    private String logoutUri;
+
+    @Value("${redirec.uri}")
+    private String redirectUri;
+
     private final CustomUserDetailsService userDetailsService;
 
     public SecurityConfig(CustomUserDetailsService userDetailsService) {
@@ -116,13 +128,13 @@ public class SecurityConfig {
     @Bean
     public RegisteredClientRepository registeredClientRepository() {
         RegisteredClient oidcClient = RegisteredClient.withId(UUID.randomUUID().toString())
-                .clientId("client")
-                .clientSecret(passwordEncoder().encode("M?TeA{mGUC8sa`[cP19"))
+                .clientId(clientId)
+                .clientSecret(passwordEncoder().encode(clientSecret))
                 .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
                 .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
-                .redirectUri("http://127.0.0.1:4200/login")
-                .postLogoutRedirectUri("http://127.0.0.1:8080/")
+                .redirectUri(redirectUri)
+                .postLogoutRedirectUri(logoutUri)
                 .scope(OidcScopes.OPENID)
                 .scope(OidcScopes.PROFILE)
                 .tokenSettings(TokenSettings.builder()
