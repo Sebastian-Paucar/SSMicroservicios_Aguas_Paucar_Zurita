@@ -3,7 +3,7 @@ export const environment  ={
   endpointUsers: "http://localhost:8001/",
   endpointCourses: "http://localhost:8002/",
 
-  authorize_uri: 'http://localhost:9000/oauth2/authorize?',
+  authorize_uri: 'https://aee3-186-101-158-232.ngrok-free.app/oauth2/authorize?',
   client_id : 'client',
   redirect_uri: 'http://127.0.0.1:4200/login',
   scope: 'openid',
@@ -12,9 +12,9 @@ export const environment  ={
   code_challenge_method: 'S256',
   code_challenge: 'X2-y3umkMNmYPEXYW3gXf04tLAgWrC-3ErorM8TVNlE',
   code_verifier: 'z6RNVHB0H3Og94goMunateJutjbKNOvAdlSBPniJFYv',
-  token_url:'http://localhost:9000/oauth2/token',
+  token_url:'https://aee3-186-101-158-232.ngrok-free.app/oauth2/token',
   grant_type:'authorization_code',
-  logout_url:'http://localhost:9000/perform_logout',
+  logout_url:'https://aee3-186-101-158-232.ngrok-free.app/perform_logout',
   login_url:'http://localhost:4200/login',
 
 }

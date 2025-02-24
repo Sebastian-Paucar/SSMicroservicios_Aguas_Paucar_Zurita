@@ -39,13 +39,14 @@ public class GatewayConfig {
                                 .requestRateLimiter(c -> c
                                         .setRateLimiter(redisRateLimiter())
                                         .setKeyResolver(ipKeyResolver())))
-                        .uri("http://localhost:8002"))
-                .route("service3", r -> r.path("/carrito/**")
+                        .uri("${service2.url}"))
+
+                .route("service4", r -> r.path("/seguridad/**")
                         .filters(f -> f.stripPrefix(1)
                                 .requestRateLimiter(c -> c
                                         .setRateLimiter(redisRateLimiter())
                                         .setKeyResolver(ipKeyResolver())))
-                        .uri("http://localhost:8003"))
+                        .uri("${service4.url}"))
                 .build();
     }
 
