@@ -33,12 +33,16 @@ import org.springframework.security.oauth2.server.authorization.token.*;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint;
 import org.springframework.security.web.util.matcher.MediaTypeRequestMatcher;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 import java.time.Duration;
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -62,11 +66,32 @@ public class SecurityConfig {
     @Value("${redirec.uri}")
     private String redirectUri;
 
+    @Value("${client.cors.uri}")
+    private String corsUri;
+
     private final CustomUserDetailsService userDetailsService;
 
     public SecurityConfig(CustomUserDetailsService userDetailsService) {
         this.userDetailsService = userDetailsService;
     }
+    /**
+     * Configura el origen, métodos, cabeceras, etc. para las peticiones CORS.
+     */
+    @Bean
+    public CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration config = new CorsConfiguration();
+        // Ajusta las reglas según tus necesidades
+        config.setAllowedOriginPatterns(List.of(corsUri)); // o filtra con tu dominio: "https://tudominio.com"
+        config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        config.setAllowedHeaders(List.of("*"));
+        config.setAllowCredentials(true);
+
+        // Registra la configuración para todas las rutas
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", config);
+        return source;
+    }
+
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -76,11 +101,13 @@ public class SecurityConfig {
     @Bean
     @Order(1)
     public SecurityFilterChain authorizationServerSecurityFilterChain(HttpSecurity http) throws Exception {
-        http.cors(Customizer.withDefaults());
+        // Habilita CORS en este filtro
+        http.cors(cors -> cors.configurationSource(corsConfigurationSource()));
 
+        // Configuraciones por defecto del Authorization Server
         OAuth2AuthorizationServerConfiguration.applyDefaultSecurity(http);
         http.getConfigurer(OAuth2AuthorizationServerConfigurer.class)
-                .oidc(Customizer.withDefaults()); // Enable OpenID Connect 1.0
+                .oidc(Customizer.withDefaults()); // Habilita OpenID Connect 1.0
 
         http
                 .exceptionHandling(exceptions -> exceptions
@@ -99,20 +126,20 @@ public class SecurityConfig {
     @Order(2)
     public SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
         http
+                // Habilita CORS en este filtro también
+                .cors(cors -> cors.configurationSource(corsConfigurationSource()))
+
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/login", "/error", "/oauth2/**", "/.well-known/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .csrf(csrf -> csrf
-                        .ignoringRequestMatchers("/auth/**", "/client/**")  // Excluir ciertas rutas del control de CSRF
+                        .ignoringRequestMatchers("/auth/**", "/client/**")
                 )
-
-
-
                 .formLogin(Customizer.withDefaults())
                 .logout(logout -> logout
                         .logoutUrl("/perform_logout")
-                        .logoutSuccessUrl("/login?logout") // Updated logout redirect URL
+                        .logoutSuccessUrl("/login?logout")
                         .invalidateHttpSession(true)
                         .deleteCookies("accessToken", "refreshToken")
                 );
