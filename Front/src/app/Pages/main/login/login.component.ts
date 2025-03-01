@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { environment } from '../../../environment/environment';
+import {Component, OnInit} from '@angular/core';
+import {environment} from '../../../../environments/environment';
 import {ActivatedRoute, Router} from '@angular/router';
 import {TokenService} from '../../../services/token.service';
 import {AuthService} from '../../../services/auth.service';
@@ -11,7 +11,7 @@ import {HttpParams} from '@angular/common/http';
   templateUrl: './login.component.html',
   styles: ``
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit{
   authorize_uri = environment.authorize_uri;
   params: any = {
     client_id: environment.client_id,
@@ -35,7 +35,7 @@ export class LoginComponent {
   async ngOnInit(): Promise<void> {
     if (this.tokenService.getAccessToken()) {
       // Si ya hay un token, redirige directamente al menú
-      this.router.navigate(['/menu/authorize']);
+      this.router.navigate(['/dashboard']);
     } else {
       // Espera un cooldown y verifica si hay un código de autorización en la URL
       await this.cooldown(200);
@@ -64,7 +64,7 @@ export class LoginComponent {
       data => {
         this.tokenService.setToken(data.access_token, data.refresh_token);
         this.cooldown(200).then(() => {
-          this.router.navigate(['/menu/authorize']); // Redirige al menú una vez que se haya obtenido y almacenado el token
+          this.router.navigate(['/dashboard']); // Redirige al menú una vez que se haya obtenido y almacenado el token
         });
       },
       error => {

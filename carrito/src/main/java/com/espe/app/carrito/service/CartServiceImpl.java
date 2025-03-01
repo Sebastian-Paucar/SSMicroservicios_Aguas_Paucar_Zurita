@@ -6,7 +6,6 @@ import com.espe.app.carrito.entity.Cart;
 import com.espe.app.carrito.entity.CartProduct;
 import com.espe.app.carrito.feign.ProductClient;
 import com.espe.app.carrito.repository.CartRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -14,10 +13,14 @@ import java.util.stream.Collectors;
 
 @Service
 public class CartServiceImpl implements CartService {
-    @Autowired
-    private CartRepository cartRepository;
-    @Autowired
-    private ProductClient productClient;
+    private final CartRepository cartRepository;
+    private final ProductClient productClient;
+
+    public CartServiceImpl(CartRepository cartRepository, ProductClient productClient) {
+        this.cartRepository = cartRepository;
+        this.productClient = productClient;
+    }
+
     @Override
     public CartDTO getCartByUserId(Integer userId) {
         Cart cart = cartRepository.findByIdUsuario(userId)

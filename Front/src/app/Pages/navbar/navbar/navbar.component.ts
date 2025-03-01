@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormsModule} from '@angular/forms';
+import {TokenService} from '../../../services/token.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +11,10 @@ import {FormsModule} from '@angular/forms';
   templateUrl: './navbar.component.html',
   styles: ``
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
+  constructor(private tokenService: TokenService, private router: Router) {
+
+  }
 
   searchQuery: string = '';
   filteredResults: string[] = [];
@@ -20,6 +25,7 @@ export class NavbarComponent {
     { name: 'Producto 2', price: 35 }
   ];
   isLoggedIn: boolean = false;
+
 
   filterResults() {
     const mockResults = ['Producto A', 'Producto B', 'Producto C'];
@@ -48,13 +54,17 @@ export class NavbarComponent {
   }
 
   login() {
-    this.isLoggedIn = true;
-    this.showUserMenu = false;
+    if (!this.tokenService.getAccessToken()) {
+      this.router.navigate(['/login']);
+      return;
+    }
   }
 
   logout() {
+    this.router.navigate(['/logout']);
     this.isLoggedIn = false;
     this.showUserMenu = false;
+
   }
 
   goToProfile() {
@@ -63,6 +73,12 @@ export class NavbarComponent {
 
   goToSettings() {
     alert('Ir a configuración');
+  }
+  ngOnInit(): void {
+    if (this.tokenService.getAccessToken()) {
+      this.isLoggedIn = true;
+      this.showUserMenu = false;
+    }
   }
 }
 

@@ -5,7 +5,6 @@ import com.espe.app.msvc_usuarios.models.Usuario;
 import com.espe.app.msvc_usuarios.services.RoleService;
 import com.espe.app.msvc_usuarios.services.UsuarioService;
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -21,11 +20,14 @@ import java.util.Optional;
 @RequestMapping("/usuarios")
 public class UsuarioController {
 
-    @Autowired
-    private UsuarioService usuarioService;
+    private final UsuarioService usuarioService;
 
-    @Autowired
-    private RoleService roleService;
+    private final RoleService roleService;
+
+    public UsuarioController(UsuarioService usuarioService, RoleService roleService) {
+        this.usuarioService = usuarioService;
+        this.roleService = roleService;
+    }
 
     @GetMapping
     @PreAuthorize("hasAnyAuthority('ROLE_USER', 'ROLE_ADMIN')")

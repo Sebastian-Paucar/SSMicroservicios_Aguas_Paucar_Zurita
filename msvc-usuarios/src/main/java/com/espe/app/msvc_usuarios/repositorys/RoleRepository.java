@@ -2,7 +2,6 @@ package com.espe.app.msvc_usuarios.repositorys;
 
 import com.espe.app.msvc_usuarios.enums.RoleName;
 import com.espe.app.msvc_usuarios.models.Role;
-
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;

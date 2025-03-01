@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
-import {Input} from 'postcss';
+import {Component} from '@angular/core';
 import {ProductService} from '../../../../services/product.service';
 import {NavbarComponent} from '../../../navbar/navbar/navbar.component';
+import {SidebarComponent} from '../../../sidebar/sidebar/sidebar.component';
 
 @Component({
   selector: 'app-dashboard',
   imports: [
-    NavbarComponent
+    NavbarComponent,
+    SidebarComponent
   ],
   templateUrl: './dashboard.component.html',
   styles: ``

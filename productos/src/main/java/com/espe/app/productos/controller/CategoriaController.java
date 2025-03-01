@@ -4,7 +4,6 @@ import com.espe.app.productos.models.Categoria;
 import com.espe.app.productos.models.Producto;
 import com.espe.app.productos.services.CategoriaService;
 import com.espe.app.productos.services.ProductoService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -16,10 +15,13 @@ import java.util.List;
 @RequestMapping("/api/categorias")
 public class CategoriaController {
 
-    @Autowired
-    private CategoriaService categoriaService;
-    @Autowired
-    private ProductoService productoService;
+    private final CategoriaService categoriaService;
+    private final ProductoService productoService;
+
+    public CategoriaController(CategoriaService categoriaService, ProductoService productoService) {
+        this.categoriaService = categoriaService;
+        this.productoService = productoService;
+    }
 
     @GetMapping
     public List<Categoria> getAll() {

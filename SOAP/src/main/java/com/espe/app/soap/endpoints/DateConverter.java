@@ -1,10 +1,10 @@
 package com.espe.app.soap.endpoints;
 
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
-import javax.xml.datatype.DatatypeFactory;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 public class DateConverter {
     public static XMLGregorianCalendar toXMLGregorianCalendar(LocalDate localDate) {

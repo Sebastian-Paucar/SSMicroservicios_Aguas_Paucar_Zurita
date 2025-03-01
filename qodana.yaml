@@ -1,0 +1,33 @@
+version: "1.0"
+
+profile:
+  name: qodana.recommended
+
+linter: jetbrains/qodana-js:2024.3  # Solo analizará Angular (JavaScript/TypeScript)
+
+exclude:
+  - name: All
+    paths:
+      - api-gateway
+      - msvc-usuarios
+      - productos
+      - security
+      - SOAP
+      - src  # Excluye cualquier código Java en src
+
+include:
+  - name: AngularAmbiguousComponentTag
+  - name: AngularNonEmptyNgContent
+  - name: AngularForBlockNonIterableVar
+  - name: AngularUndefinedModuleExport
+  - name: AngularUndefinedTag
+  - name: AngularUnsupportedSyntax
+  - name: AngularUnresolvedPipe
+  - name: AngularUnusedComponentImport
+  - name: AngularCliAddDependency
+  - name: AngularIncorrectLetUsage
+  - name: AngularInvalidSelector
+  - name: AngularMissingOrInvalidDeclarationInModule
+  - name: AngularMultipleStructuralDirectives
+  - name: AngularMissingRequiredDirectiveInputBinding
+  - name: AngularIncorrectTemplateDefinition

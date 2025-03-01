@@ -1,8 +1,7 @@
 export const environment  ={
   production: false,
-  endpointUsers: "http://localhost:8001/",
-  endpointCourses: "http://localhost:8002/",
-
+  endpointUsers: "http://186.101.180.67:2000/crud/",
+  endpointFree: "http://186.101.180.67:2000/crud",
   authorize_uri: 'https://securityecovida.onrender.com/oauth2/authorize?',
   client_id : 'client',
   redirect_uri: 'https://ecovida-ten.vercel.app/login',
@@ -14,8 +13,8 @@ export const environment  ={
   code_verifier: 'z6RNVHB0H3Og94goMunateJutjbKNOvAdlSBPniJFYv',
   token_url:'https://securityecovida.onrender.com/oauth2/token',
   grant_type:'authorization_code',
-  logout_url:'https://securityecovida.onrender.com/perform_logout',
-  login_url:'http://localhost:4200/login',
+  logout_url:'https://securityecovida.onrender.com/logout',
+  login_url:'https://ecovida-ten.vercel.app/login',
 
 }
 

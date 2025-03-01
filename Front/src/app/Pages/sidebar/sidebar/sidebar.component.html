@@ -1,0 +1,25 @@
+<aside class='bg-gray-100 w-xs p-4 h-screen shadow-lg relative left-0 top-0'>
+  <h2 class='text-lg font-bold mb-4'>Filtros</h2>
+
+  <!-- Filtrar por Categoría -->
+  <div>
+    <h3 class='font-semibold mb-2'>Categorías</h3>
+    @for (category of categories; track category) {
+      <label class='flex items-center gap-2'>
+        <input type='checkbox' [(ngModel)]='category.selected' (change)='applyFilters()' />
+        {{ category.name }}
+      </label>
+    }
+  </div>
+
+      <!-- Filtrar por Proveedor -->
+      <div class='mt-4'>
+        <h3 class='font-semibold mb-2'>Proveedor</h3>
+        <select class='w-full px-2 py-1 border rounded' [(ngModel)]='selectedProvider' (change)='applyFilters()'>
+          <option value=''>Todos</option>
+          @for (provider of providers; track provider) { <option [value]='provider'>
+            {{ provider }}
+          </option>}
+        </select>
+      </div>
+</aside>

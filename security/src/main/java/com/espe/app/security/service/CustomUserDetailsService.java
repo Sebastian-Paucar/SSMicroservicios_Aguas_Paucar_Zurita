@@ -2,11 +2,11 @@ package com.espe.app.security.service;
 
 import com.espe.app.security.client.UsuarioClient;
 import com.espe.app.security.entity.Usuario;
-import org.springframework.stereotype.Service;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
