@@ -1,5 +1,6 @@
 package com.espe.app.msvc_usuarios.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -9,7 +10,6 @@ import org.hibernate.validator.constraints.Length;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
@@ -47,7 +47,7 @@ public class Usuario implements UserDetails {
     @NotBlank(message = "El campo perfil no puede estar vacío")
     private String perfil;
 
-    @Column(name = "imagen_perfil")
+    @Column(name = "imagen_perfil", columnDefinition = "TEXT")
     private String imagenPerfil;
 
     @ManyToMany(fetch = FetchType.EAGER)
@@ -64,55 +64,38 @@ public class Usuario implements UserDetails {
             joinColumns = @JoinColumn(name = "id_usuario"),
             inverseJoinColumns = @JoinColumn(name = "id_direccion")
     )
-    @JsonManagedReference
+    @JsonIgnore // <- Evita que la relación sea serializada en el JSON de salida
     private Set<Direccion> direcciones = new HashSet<>();
+
+
+
     public Set<Direccion> getDirecciones() {
         return direcciones;
     }
 
-    public void setDirecciones(Set<Direccion> direcciones) {
-        this.direcciones = direcciones;
-    }
-
-    // Métodos de la interfaz UserDetails
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return roles.stream()
-                .map(role -> new SimpleGrantedAuthority(role.getAuthority()))
+                .map(role -> new SimpleGrantedAuthority(role.getRole().name())) // <- Ahora usa getRole().name()
                 .collect(Collectors.toList());
     }
 
+    // Métodos de UserDetails
     @Override
-    public String getPassword() {
-        return password;
-    }
-
+    public String getPassword() { return password; }
     @Override
-    public String getUsername() {
-        return email; // Utilizamos el email como nombre de usuario.
-    }
-
+    public String getUsername() { return email; }
     @Override
-    public boolean isAccountNonExpired() {
-        return true; // Por defecto, la cuenta no está expirada.
-    }
-
+    public boolean isAccountNonExpired() { return true; }
     @Override
-    public boolean isAccountNonLocked() {
-        return true; // Por defecto, la cuenta no está bloqueada.
-    }
-
+    public boolean isAccountNonLocked() { return true; }
     @Override
-    public boolean isCredentialsNonExpired() {
-        return true; // Por defecto, las credenciales no están expiradas.
-    }
-
+    public boolean isCredentialsNonExpired() { return true; }
     @Override
-    public boolean isEnabled() {
-        return true; // Por defecto, la cuenta está habilitada.
-    }
+    public boolean isEnabled() { return true; }
 
-    // Getters y setters
+    // Getters y Setters
+
     public int getIdUsuario() {
         return idUsuario;
     }
@@ -121,39 +104,39 @@ public class Usuario implements UserDetails {
         this.idUsuario = idUsuario;
     }
 
-    public String getNombre() {
+    public @NotEmpty @NotBlank(message = "El campo nombre no puede estar vacío") String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void setNombre(@NotEmpty @NotBlank(message = "El campo nombre no puede estar vacío") String nombre) {
         this.nombre = nombre;
     }
 
-    public String getEmail() {
+    public @NotEmpty @NotBlank(message = "El campo email no puede estar vacío") @Email String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(@NotEmpty @NotBlank(message = "El campo email no puede estar vacío") @Email String email) {
         this.email = email;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(@NotEmpty @NotBlank(message = "El campo contraseña no puede estar vacío") String password) {
         this.password = password;
     }
 
-    public String getTelefono() {
+    public @NotEmpty @NotBlank(message = "El campo teléfono no puede estar vacío") @Length(min = 10, max = 10, message = "El teléfono debe tener exactamente 10 dígitos") String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(String telefono) {
+    public void setTelefono(@NotEmpty @NotBlank(message = "El campo teléfono no puede estar vacío") @Length(min = 10, max = 10, message = "El teléfono debe tener exactamente 10 dígitos") String telefono) {
         this.telefono = telefono;
     }
 
-    public String getPerfil() {
+    public @NotEmpty @NotBlank(message = "El campo perfil no puede estar vacío") String getPerfil() {
         return perfil;
     }
 
-    public void setPerfil(String perfil) {
+    public void setPerfil(@NotEmpty @NotBlank(message = "El campo perfil no puede estar vacío") String perfil) {
         this.perfil = perfil;
     }
 

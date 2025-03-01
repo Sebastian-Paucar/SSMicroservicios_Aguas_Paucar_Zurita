@@ -1,6 +1,5 @@
 package com.espe.app.msvc_usuarios.controller;
 
-import com.espe.app.msvc_usuarios.models.Direccion;
 import com.espe.app.msvc_usuarios.models.Usuario;
 import com.espe.app.msvc_usuarios.services.DireccionService;
 import com.espe.app.msvc_usuarios.services.UsuarioService;
@@ -8,14 +7,13 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
+
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/crear-usuario")

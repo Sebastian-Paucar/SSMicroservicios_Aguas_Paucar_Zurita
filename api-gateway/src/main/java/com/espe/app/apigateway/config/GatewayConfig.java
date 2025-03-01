@@ -39,27 +39,21 @@ public class GatewayConfig {
                                 .requestRateLimiter(c -> c
                                         .setRateLimiter(redisRateLimiter())
                                         .setKeyResolver(ipKeyResolver())))
-                        .uri("${service2.url}"))
-
-                .route("service4", r -> r.path("/seguridad/**")
+                        .uri("http://localhost:8002"))
+                .route("service3", r -> r.path("/carrito/**")
                         .filters(f -> f.stripPrefix(1)
                                 .requestRateLimiter(c -> c
                                         .setRateLimiter(redisRateLimiter())
                                         .setKeyResolver(ipKeyResolver())))
-                        .uri("${service4.url}"))
+                        .uri("http://localhost:8003"))
                 .build();
     }
 
     @Bean
     @Primary
     public KeyResolver ipKeyResolver() {
-        // Resolver basado en la IP del cliente (manejo de proxies incluido)
-        return exchange -> Mono.just(
-                exchange.getRequest()
-                        .getHeaders()
-                        .getFirst("X-Forwarded-For") != null
-                        ? exchange.getRequest().getHeaders().getFirst("X-Forwarded-For")
-                        : exchange.getRequest().getRemoteAddress().getAddress().getHostAddress()
-        );
+        return exchange -> Mono.justOrEmpty(exchange.getRequest().getRemoteAddress())
+                .map(addr -> addr.getAddress().getHostAddress());
     }
+
 }

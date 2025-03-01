@@ -3779,3 +3779,1186 @@
             on d1_1.id_direccion=d1_0.id_direccion 
     where
         d1_0.id_usuario=?
+2025-02-23 22:43:20 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2025-02-23 22:43:20 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-02-23 22:43:20 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-02-23 22:43:44 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2025-02-23 22:43:44 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-02-23 22:43:44 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-02-23 22:46:43 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2025-02-23 22:46:43 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-02-23 22:46:43 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-02-24 02:41:23 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2025-02-24 02:41:23 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-02-24 02:41:23 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-02-24 02:44:07 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2025-02-24 02:44:07 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-02-24 02:44:07 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-02-24 02:49:16 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2025-02-24 02:49:16 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-02-24 02:49:16 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-02-24 03:03:08 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2025-02-24 03:03:08 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-02-24 03:03:08 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-02-24 04:01:16 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2025-02-24 04:01:16 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-02-24 04:01:16 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-02-24 04:11:27 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2025-02-24 04:11:27 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-02-24 04:11:27 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-02-24 22:58:21 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2025-02-24 22:58:21 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-02-24 22:58:21 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-02-24 23:41:18 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2025-02-24 23:41:18 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-02-24 23:41:18 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-02-25 08:31:09 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2025-02-25 08:31:09 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-02-25 08:31:09 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-02-27 22:01:39 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2025-02-27 22:01:39 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-02-27 22:01:39 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-02-27 23:16:14 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2025-02-27 23:16:14 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-02-27 23:16:14 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-02-27 23:41:57 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2025-02-27 23:41:57 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-02-27 23:41:57 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-02-27 23:49:09 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2025-02-27 23:49:09 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-02-27 23:49:10 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-02-28 00:19:14 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2025-02-28 00:19:14 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-02-28 00:19:14 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-02-28 00:53:59 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2025-02-28 00:53:59 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-02-28 00:53:59 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-02-28 00:54:27 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2025-02-28 00:54:27 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-02-28 00:54:27 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-03-01 01:29:05 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0
+2025-03-01 01:29:05 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-03-01 01:29:05 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-03-01 01:31:22 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0
+2025-03-01 01:31:22 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-03-01 01:31:22 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-03-01 01:31:42 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0
+2025-03-01 01:31:42 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-03-01 01:31:42 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-03-01 13:14:49 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0
+2025-03-01 13:14:49 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-03-01 13:14:49 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-03-01 13:23:52 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0
+2025-03-01 13:23:52 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-03-01 13:23:52 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-03-01 13:25:49 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0
+2025-03-01 13:25:49 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-03-01 13:25:49 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-03-01 14:04:08 - 
+    alter table if exists usuarios.direccion 
+       alter column calle_principal set data type varchar(255)
+2025-03-01 14:04:08 - 
+    alter table if exists usuarios.direccion 
+       alter column calle_secundaria set data type varchar(255)
+2025-03-01 14:04:08 - 
+    alter table if exists usuarios.direccion 
+       alter column ciudad set data type varchar(255)
+2025-03-01 14:04:08 - 
+    alter table if exists usuarios.direccion 
+       alter column detalle set data type varchar(255)
+2025-03-01 14:04:08 - 
+    alter table if exists usuarios.direccion 
+       alter column provincia set data type varchar(255)
+2025-03-01 14:04:08 - 
+    alter table if exists usuarios.role 
+       alter column role set data type varchar(255)
+2025-03-01 14:04:08 - 
+    alter table if exists usuarios.usuario 
+       alter column email set data type varchar(255)
+2025-03-01 14:04:08 - 
+    alter table if exists usuarios.usuario 
+       alter column imagen_perfil set data type TEXT
+2025-03-01 14:04:08 - 
+    alter table if exists usuarios.usuario 
+       alter column nombre set data type varchar(255)
+2025-03-01 14:04:08 - 
+    alter table if exists usuarios.usuario 
+       alter column password set data type varchar(255)
+2025-03-01 14:04:08 - 
+    alter table if exists usuarios.usuario 
+       alter column perfil set data type varchar(255)
+2025-03-01 14:04:29 - 
+    alter table if exists usuarios.direccion 
+       alter column calle_principal set data type varchar(255)
+2025-03-01 14:04:29 - 
+    alter table if exists usuarios.direccion 
+       alter column calle_secundaria set data type varchar(255)
+2025-03-01 14:04:29 - 
+    alter table if exists usuarios.direccion 
+       alter column ciudad set data type varchar(255)
+2025-03-01 14:04:29 - 
+    alter table if exists usuarios.direccion 
+       alter column detalle set data type varchar(255)
+2025-03-01 14:04:29 - 
+    alter table if exists usuarios.direccion 
+       alter column provincia set data type varchar(255)
+2025-03-01 14:04:29 - 
+    alter table if exists usuarios.role 
+       alter column role set data type varchar(255)
+2025-03-01 14:04:29 - 
+    alter table if exists usuarios.usuario 
+       alter column email set data type varchar(255)
+2025-03-01 14:04:29 - 
+    alter table if exists usuarios.usuario 
+       alter column imagen_perfil set data type TEXT
+2025-03-01 14:04:29 - 
+    alter table if exists usuarios.usuario 
+       alter column nombre set data type varchar(255)
+2025-03-01 14:04:29 - 
+    alter table if exists usuarios.usuario 
+       alter column password set data type varchar(255)
+2025-03-01 14:04:29 - 
+    alter table if exists usuarios.usuario 
+       alter column perfil set data type varchar(255)
+2025-03-01 14:11:48 - 
+    alter table if exists usuarios.direccion 
+       alter column calle_principal set data type varchar(255)
+2025-03-01 14:11:48 - 
+    alter table if exists usuarios.direccion 
+       alter column calle_secundaria set data type varchar(255)
+2025-03-01 14:11:48 - 
+    alter table if exists usuarios.direccion 
+       alter column ciudad set data type varchar(255)
+2025-03-01 14:11:48 - 
+    alter table if exists usuarios.direccion 
+       alter column detalle set data type varchar(255)
+2025-03-01 14:11:48 - 
+    alter table if exists usuarios.direccion 
+       alter column provincia set data type varchar(255)
+2025-03-01 14:11:48 - 
+    alter table if exists usuarios.role 
+       alter column role set data type varchar(255)
+2025-03-01 14:11:48 - 
+    alter table if exists usuarios.usuario 
+       alter column email set data type varchar(255)
+2025-03-01 14:11:48 - 
+    alter table if exists usuarios.usuario 
+       alter column imagen_perfil set data type TEXT
+2025-03-01 14:11:48 - 
+    alter table if exists usuarios.usuario 
+       alter column nombre set data type varchar(255)
+2025-03-01 14:11:48 - 
+    alter table if exists usuarios.usuario 
+       alter column password set data type varchar(255)
+2025-03-01 14:11:48 - 
+    alter table if exists usuarios.usuario 
+       alter column perfil set data type varchar(255)
+2025-03-01 14:13:25 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0
+2025-03-01 14:13:25 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?
+2025-03-01 14:13:25 - 
+    select
+        d1_0.id_usuario,
+        d1_1.id_direccion,
+        d1_1.calle_principal,
+        d1_1.calle_secundaria,
+        d1_1.ciudad,
+        d1_1.codigo_postal,
+        d1_1.detalle,
+        d1_1.provincia 
+    from
+        usuarios.asocia d1_0 
+    join
+        usuarios.direccion d1_1 
+            on d1_1.id_direccion=d1_0.id_direccion 
+    where
+        d1_0.id_usuario=?
+2025-03-01 14:15:13 - 
+    alter table if exists usuarios.usuario 
+       alter column imagen_perfil set data type TEXT
+2025-03-01 14:15:22 - 
+    alter table if exists usuarios.usuario 
+       alter column imagen_perfil set data type TEXT
