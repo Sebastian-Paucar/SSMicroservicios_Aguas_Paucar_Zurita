@@ -56,10 +56,11 @@ export class ProductService {
       formData.append('file', imagen);
     }
 
-    const emailUsuario = localStorage.getItem('email'); // Obtener el email del usuario autenticado
+    const emailUsuario = "juan.perez@example.com";
+      //localStorage.getItem('email'); // Obtener el email del usuario autenticado
     formData.append('emailUsuario', emailUsuario || '');
 
-    return this.http.post<Producto>(this.apiUrl, formData, { headers: this.getAuthHeaders() })
+    return this.http.post<Producto>(this.apiUrl, formData)
       .pipe(catchError(this.handleError));
   }
 
@@ -74,7 +75,16 @@ export class ProductService {
   /**
    * Obtener la URL de la imagen para mostrar en el frontend.
    */
+  /**
+   * Obtener la URL de la imagen para mostrar en el frontend.
+   */
   obtenerImagenUrl(imagenPath: string): string {
-    return `${this.endpoint}/${imagenPath}`;
+    if (!imagenPath) {
+      return 'assets/no-image.png'; // Imagen por defecto si no hay imagen
+    }
+
+    // Enviar la ruta como parámetro en la solicitud al backend
+    return `${this.endpoint}/api/productos/imagenes?path=${encodeURIComponent(imagenPath)}`;
   }
+
 }
