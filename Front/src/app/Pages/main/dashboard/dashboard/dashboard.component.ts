@@ -4,6 +4,9 @@ import { NavbarComponent } from '../../../navbar/navbar/navbar.component';
 import { SidebarComponent } from '../../../sidebar/sidebar/sidebar.component';
 import { Producto } from '../../../../interfaces/global.interfaces';
 import {NgIf, NgOptimizedImage} from '@angular/common';
+import {Subscription} from 'rxjs';
+import {SearchService} from '../../../../services/search.service';
+import {CartService} from '../../../../services/cart.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,20 +17,28 @@ import {NgIf, NgOptimizedImage} from '@angular/common';
 })
 export class DashboardComponent implements OnInit {
   products: Producto[] = [];
-
-  constructor(private productService: ProductService) {}
+  filteredProducts: Producto[] = [];
+  private searchSubscription!: Subscription;
+  constructor(private productService: ProductService,private searchService: SearchService, private cartService: CartService) {}
 
   ngOnInit(): void {
     this.cargarProductos();
+
+    // Suscribirse al término de búsqueda
+    this.searchSubscription = this.searchService.searchQuery$.subscribe(query => {
+      this.filtrarProductos(query);
+    });
   }
 
   /**
    * Carga la lista de productos desde el backend.
    */
+
   cargarProductos(): void {
     this.productService.getProductos().subscribe({
       next: (data) => {
         this.products = data;
+        this.filteredProducts = data; // Inicialmente, mostramos todos los productos
       },
       error: (err) => {
         console.error('Error al obtener productos:', err);
@@ -35,6 +46,15 @@ export class DashboardComponent implements OnInit {
     });
   }
 
+  filtrarProductos(query: string) {
+    if (!query) {
+      this.filteredProducts = this.products;
+    } else {
+      this.filteredProducts = this.products.filter(p =>
+        p.nombre.toLowerCase().includes(query.toLowerCase())
+      );
+    }
+  }
   /**
    * Obtiene la URL de la imagen almacenada en el servidor.
    */
@@ -47,14 +67,7 @@ export class DashboardComponent implements OnInit {
    * @param producto Producto que se desea comprar.
    */
   comprarProducto(producto: Producto): void {
-    // this.productService.comprarProducto(producto.idProducto).subscribe({
-    //   next: () => {
-    //     this.mostrarNotificacion(`✅ ¡Compra exitosa! Has comprado: ${producto.nombre}`, 'success');
-    //   },
-    //   error: (err: { message: any; }) => {
-    //     this.mostrarNotificacion(`❌ Error al comprar el producto: ${err.message}`, 'error');
-    //   }
-    // });
+    this.cartService.addToCart(producto);
   }
 
   /**
@@ -73,5 +86,8 @@ export class DashboardComponent implements OnInit {
     setTimeout(() => {
       notificacion.remove();
     }, 3000);
+  }
+  ngOnDestroy() {
+    this.searchSubscription.unsubscribe();
   }
 }

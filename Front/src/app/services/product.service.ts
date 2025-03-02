@@ -87,4 +87,13 @@ export class ProductService {
     return `${this.endpoint}/api/productos/imagenes?path=${encodeURIComponent(imagenPath)}`;
   }
 
+  /**
+   * Actualizar la cantidad de un producto en el backend.
+   */
+  actualizarCantidad(id: number, cantidad: number): Observable<Producto> {
+    return this.http.patch<Producto>(`${this.apiUrl}/${id}/cantidad?cantidad=${cantidad}`, {}, { headers: this.getAuthHeaders() })
+      .pipe(catchError(this.handleError));
+  }
+
+
 }

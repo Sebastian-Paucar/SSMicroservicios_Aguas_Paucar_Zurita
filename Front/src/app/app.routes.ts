@@ -5,6 +5,7 @@ import {LogoutComponent} from './Pages/main/logout/logout.component';
 import {AuthGuard} from './services/auth.guard';
 import {RegisterComponent} from './Pages/main/register/register/register.component';
 import {ProductFormComponent} from './Pages/main/productos/crearProducto/product-form/product-form.component';
+import {CarritoComponent} from './Pages/main/carrito/carrito/carrito.component';
 
 export const routes: Routes = [
 
@@ -22,6 +23,10 @@ export const routes: Routes = [
   {
     path:"crearProducto",
     component:ProductFormComponent
+  },
+  {
+    path: 'carrito',
+    component: CarritoComponent
   },
   {
     path: 'logout',

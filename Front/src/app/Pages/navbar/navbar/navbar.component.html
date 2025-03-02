@@ -1,41 +1,52 @@
 <nav class='bg-blue-600 text-white p-4 flex justify-between items-center fixed top-0 left-0 w-full z-50'>
-  <div class='text-xl font-bold'>EcoVida</div>
+  <div class='text-xl font-bold cursor-pointer'>
+    <a (click)="navigateTo('/dashboard')">EcoVida</a>
+  </div>
+
+  <!-- Mostrar barra de búsqueda solo si NO estamos en la vista del carrito -->
   <div class='relative w-1/3'>
-    <input
-      type='text'
-      placeholder='Buscar productos...'
-      class='w-full px-4 py-2 rounded-lg border-2 border-b-white text-white focus:outline-none focus:ring-1 focus:ring-white'
-      [(ngModel)]='searchQuery'
-      (input)='filterResults()'
-    />
-    @if (filteredResults.length > 0) {
-      <ul class='absolute w-full bg-white text-black shadow-lg rounded-md mt-1'>
-        @for (result of filteredResults; track result) {
-          <li class='p-2 hover:bg-gray-200 cursor-pointer' (click)='selectResult(result)'>
-            {{ result }}
-          </li>
-        }
-      </ul>
+    @if (!isCartView) {
+      <input
+        type='text'
+        placeholder='Buscar productos...'
+        class='w-full px-4 py-2 rounded-lg border-2 border-b-white text-white focus:outline-none focus:ring-1 focus:ring-white'
+        [(ngModel)]='searchQuery'
+        (input)='filterResults()'
+      />
+      @if (filteredResults.length > 0) {
+        <ul class='absolute w-full bg-white text-black shadow-lg rounded-md mt-1'>
+          @for (result of filteredResults; track result) {
+            <li class='p-2 hover:bg-gray-200 cursor-pointer' (click)='selectResult(result)'>
+              {{ result }}
+            </li>
+          }
+        </ul>
+      }
     }
   </div>
+
+
   <div class='flex items-center gap-4'>
     <div class='relative group'>
-      <button>🛒</button>
+      <button>🛒 ({{ cartItems.length }})</button>
       <div class='hidden group-hover:block absolute right-0 bg-white text-black shadow-lg rounded-md w-64 p-4'>
         @if (cartItems.length === 0) {
           <p>El carrito está vacío</p>
         } @else {
           <ul>
-            @for (item of cartItems; track item) {
+            @for (item of cartItems; track item.producto.idProducto) {
               <li class='flex justify-between'>
-                {{ item.name }} - ${{ item.price }}
+                {{ item.producto.nombre }} - (x{{ item.cantidad }})
               </li>
             }
           </ul>
+          <button class='mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg w-full' (click)='goToCart()'>
+            Ir al carrito
+          </button>
         }
-        <button class='mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg w-full' (click)='goToCart()'>Ir al carrito</button>
       </div>
     </div>
+
     <div class='relative group'>
       <button (click)='goToShipments()'>📦</button>
     </div>
@@ -45,8 +56,8 @@
         @if (!isLoggedIn) {
           <button class='w-full text-left p-2 hover:bg-gray-200' (click)='login()'>Iniciar sesión</button>
         } @else {
-          <button class='w-full text-left p-2 hover:bg-gray-200' (click)='goToProfile()'>Perfil</button>
-          <button class='w-full text-left p-2 hover:bg-gray-200' (click)='goToSettings()'>Configuración</button>
+          <button class='w-full text-left p-2 hover:bg-gray-200' (click)='navigateTo("/profile")'>Perfil</button>
+          <button class='w-full text-left p-2 hover:bg-gray-200' (click)='navigateTo("/settings")'>Configuración</button>
           <button class='w-full text-left p-2 hover:bg-red-500 text-black' (click)='logout()'>Cerrar sesión</button>
         }
       </div>

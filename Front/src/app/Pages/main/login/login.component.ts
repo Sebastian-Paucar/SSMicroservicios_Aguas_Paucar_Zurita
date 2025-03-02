@@ -63,8 +63,13 @@ export class LoginComponent implements OnInit{
     this.authService.getToken(this.code).subscribe(
       data => {
         this.tokenService.setToken(data.access_token, data.refresh_token);
+
         this.cooldown(200).then(() => {
-          this.router.navigate(['/dashboard']); // Redirige al menú una vez que se haya obtenido y almacenado el token
+          // Verificar si hay una URL de redirección almacenada
+          const redirectUrl = localStorage.getItem('redirectAfterLogin') || '/dashboard';
+          localStorage.removeItem('redirectAfterLogin'); // Eliminar para evitar futuras redirecciones incorrectas
+
+          this.router.navigate([redirectUrl]); // Redirigir al carrito o dashboard
         });
       },
       error => {
@@ -74,7 +79,9 @@ export class LoginComponent implements OnInit{
     );
   }
 
+
   private cooldown(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
+
 }

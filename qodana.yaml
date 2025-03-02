@@ -1,33 +1,33 @@
+#-------------------------------------------------------------------------------#
+#               Qodana analysis is configured by qodana.yaml file               #
+#             https://www.jetbrains.com/help/qodana/qodana-yaml.html            #
+#-------------------------------------------------------------------------------#
 version: "1.0"
 
+#Specify inspection profile for code analysis
 profile:
   name: qodana.recommended
 
-linter: jetbrains/qodana-js:2024.3  # Solo analizará Angular (JavaScript/TypeScript)
-
-exclude:
-  - name: All
-    paths:
-      - api-gateway
-      - msvc-usuarios
-      - productos
-      - security
-      - SOAP
-      - src  # Excluye cualquier código Java en src
-
+#Enable inspections
 include:
-  - name: AngularAmbiguousComponentTag
-  - name: AngularNonEmptyNgContent
-  - name: AngularForBlockNonIterableVar
-  - name: AngularUndefinedModuleExport
-  - name: AngularUndefinedTag
-  - name: AngularUnsupportedSyntax
-  - name: AngularUnresolvedPipe
-  - name: AngularUnusedComponentImport
-  - name: AngularCliAddDependency
-  - name: AngularIncorrectLetUsage
-  - name: AngularInvalidSelector
-  - name: AngularMissingOrInvalidDeclarationInModule
-  - name: AngularMultipleStructuralDirectives
-  - name: AngularMissingRequiredDirectiveInputBinding
-  - name: AngularIncorrectTemplateDefinition
+  - name: LombokGetterMayBeUsed
+    paths:
+      - Front
+
+#Disable inspections
+#exclude:
+#  - name: <SomeDisabledInspectionId>
+#    paths:
+#      - <path/where/not/run/inspection>
+
+projectJDK: "17" #(Applied in CI/CD pipeline)
+
+#Execute shell command before Qodana execution (Applied in CI/CD pipeline)
+#bootstrap: sh ./prepare-qodana.sh
+
+#Install IDE plugins before Qodana execution (Applied in CI/CD pipeline)
+#plugins:
+#  - id: <plugin.id> #(plugin id can be found at https://plugins.jetbrains.com)
+
+#Specify Qodana linter for analysis (Applied in CI/CD pipeline)
+linter: jetbrains/qodana-jvm:2024.3
