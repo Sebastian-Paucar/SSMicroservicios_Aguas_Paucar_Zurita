@@ -1,7 +1,6 @@
 package com.espe.app.msvc_usuarios.services;
 
 import com.espe.app.msvc_usuarios.models.Direccion;
-import java.util.ArrayList;
 import com.espe.app.msvc_usuarios.models.Usuario;
 import com.espe.app.msvc_usuarios.repositorys.DireccionRepository;
 import com.espe.app.msvc_usuarios.repositorys.UsuarioRepository;
@@ -9,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 

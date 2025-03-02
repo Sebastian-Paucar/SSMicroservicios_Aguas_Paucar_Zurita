@@ -1,6 +1,6 @@
-import { CanActivate, Router } from '@angular/router';
-import { Injectable } from '@angular/core';
-import { TokenService } from './token.service';
+import {CanActivate, Router} from '@angular/router';
+import {Injectable} from '@angular/core';
+import {TokenService} from './token.service';
 
 /**
  * Guard que verifica la existencia de un token de acceso.

@@ -3,7 +3,6 @@ package com.espe.app.msvc_usuarios.controller;
 import com.espe.app.msvc_usuarios.models.Direccion;
 import com.espe.app.msvc_usuarios.services.DireccionService;
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -19,8 +18,11 @@ import java.util.Optional;
 @RequestMapping("/direcciones")
 public class DireccionController {
 
-    @Autowired
-    private DireccionService direccionService;
+    private final DireccionService direccionService;
+
+    public DireccionController(DireccionService direccionService) {
+        this.direccionService = direccionService;
+    }
 
     @GetMapping
     @PreAuthorize("hasAnyAuthority('ROLE_USER', 'ROLE_ADMIN')")

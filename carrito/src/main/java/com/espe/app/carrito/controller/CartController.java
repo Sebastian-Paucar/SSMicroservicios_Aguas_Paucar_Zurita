@@ -2,14 +2,16 @@ package com.espe.app.carrito.controller;
 
 import com.espe.app.carrito.dto.CartDTO;
 import com.espe.app.carrito.service.CartService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/carts")
 public class CartController {
-    @Autowired
-    private CartService cartService;
+    private final CartService cartService;
+
+    public CartController(CartService cartService) {
+        this.cartService = cartService;
+    }
 
     @GetMapping("/user/{userId}")
     public CartDTO getCartByUserId(@PathVariable Integer userId) {

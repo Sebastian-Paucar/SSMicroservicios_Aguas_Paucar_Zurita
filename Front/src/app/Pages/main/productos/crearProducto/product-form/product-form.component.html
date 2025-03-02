@@ -1,0 +1,61 @@
+<div class="container mx-auto p-6 bg-white shadow-md rounded-lg">
+  <h2 class="text-2xl font-bold mb-4">Crear Producto</h2>
+
+  <form (ngSubmit)="crearProducto()" [formGroup]="productForm" class="space-y-4">
+
+    <div>
+      <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
+      <input type="text" id="nombre" formControlName="nombre" class="input-field" />
+      @if (productForm.get('nombre')?.invalid && productForm.get('nombre')?.touched) {
+        <p class="text-red-500 text-sm">El nombre es obligatorio y debe tener entre 3 y 100 caracteres.</p>
+      }
+    </div>
+
+    <div>
+      <label for="descripcion" class="block text-sm font-medium text-gray-700">Descripción</label>
+      <textarea id="descripcion" formControlName="descripcion" class="input-field"></textarea>
+      @if (productForm.get('descripcion')?.invalid && productForm.get('descripcion')?.touched) {
+        <p class="text-red-500 text-sm">La descripción es obligatoria y no debe exceder los 500 caracteres.</p>
+      }
+    </div>
+
+    <div>
+      <label for="precio" class="block text-sm font-medium text-gray-700">Precio</label>
+      <input type="number" id="precio" formControlName="precio" class="input-field" min="0" step="0.01" />
+      @if (productForm.get('precio')?.invalid && productForm.get('precio')?.touched) {
+        <p class="text-red-500 text-sm">El precio debe ser mayor o igual a 0.</p>
+      }
+    </div>
+
+    <div>
+      <label for="cantidad" class="block text-sm font-medium text-gray-700">Cantidad</label>
+      <input type="number" id="cantidad" formControlName="cantidad" class="input-field" min="1" />
+      @if (productForm.get('cantidad')?.invalid && productForm.get('cantidad')?.touched) {
+        <p class="text-red-500 text-sm">La cantidad debe ser al menos 1.</p>
+      }
+    </div>
+
+    <div>
+      <label for="estado" class="block text-sm font-medium text-gray-700">Estado</label>
+      <select id="estado" formControlName="estado" class="input-field">
+        <option value="DISPONIBLE">Disponible</option>
+        <option value="NO DISPONIBLE">No Disponible</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="imagen" class="block text-sm font-medium text-gray-700">Imagen</label>
+      <input type="file" id="imagen" (change)="onFileSelected($event)" class="input-field" accept="image/png, image/jpeg, image/jpg, image/webp" />
+      @if (imagenError) {
+        <p class="text-red-500 text-sm">{{ imagenError }}</p>
+      }
+      @if (previewUrl) {
+        <img [src]="previewUrl" class="mt-2 w-40 h-40 object-cover rounded-md" />
+      }
+    </div>
+
+    <button type="submit" class="btn-primary w-full" [disabled]="productForm.invalid || imagenError">
+      Crear Producto
+    </button>
+  </form>
+</div>

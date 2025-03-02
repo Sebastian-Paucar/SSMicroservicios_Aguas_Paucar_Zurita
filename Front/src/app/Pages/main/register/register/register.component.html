@@ -1,0 +1,139 @@
+
+<div class="flex items-center justify-center min-h-screen bg-gray-100">
+  <div class="w-full max-w-md bg-white rounded-lg shadow p-6">
+    <h2 class="text-2xl font-bold mb-4 text-center">Registrar Nuevo Usuario</h2>
+
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <!-- Nombre -->
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2" for="nombre">
+          Nombre
+        </label>
+        <input
+          id="nombre"
+          type="text"
+          formControlName="nombre"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          placeholder="Ingresa tu nombre"
+        />
+        <div
+          class="text-red-500 text-sm mt-1"
+          *ngIf="registrationForm.get('nombre')?.invalid && registrationForm.get('nombre')?.touched"
+        >
+          El nombre es obligatorio.
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2" for="email">
+          Email
+        </label>
+        <input
+          id="email"
+          type="email"
+          formControlName="email"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          placeholder="usuario@correo.com"
+        />
+        <div
+          class="text-red-500 text-sm mt-1"
+          *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched"
+        >
+          <!-- Mensajes de error según el tipo -->
+          <span *ngIf="registrationForm.get('email')?.errors?.['required']">
+                El email es obligatorio.
+              </span>
+          <span *ngIf="registrationForm.get('email')?.errors?.['pattern']">
+                Solo se permiten emails con dominios válidos (.com, .edu.ec, .ec, .net, etc).
+              </span>
+        </div>
+      </div>
+
+      <!-- Password -->
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2" for="password">
+          Contraseña
+        </label>
+        <input
+          id="password"
+          type="password"
+          formControlName="password"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          placeholder="Contraseña"
+        />
+        <div
+          class="text-red-500 text-sm mt-1"
+          *ngIf="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched"
+        >
+          <!-- Mensajes de error según el tipo -->
+          <span *ngIf="registrationForm.get('password')?.errors?.['required']">
+                La contraseña es obligatoria.
+              </span>
+          <span *ngIf="registrationForm.get('password')?.errors?.['pattern']">
+                Debe tener al menos 8 caracteres, incluyendo mayúsculas, minúsculas, dígitos y un carácter especial.
+              </span>
+        </div>
+      </div>
+
+      <!-- Teléfono -->
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2" for="telefono">
+          Teléfono
+        </label>
+        <input
+          id="telefono"
+          type="text"
+          formControlName="telefono"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          placeholder="Ingresa tu teléfono (10 dígitos)"
+        />
+        <div
+          class="text-red-500 text-sm mt-1"
+          *ngIf="registrationForm.get('telefono')?.invalid && registrationForm.get('telefono')?.touched"
+        >
+          El teléfono debe tener 10 dígitos.
+        </div>
+      </div>
+
+      <!-- Perfil -->
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2" for="perfil">
+          Perfil
+        </label>
+        <input
+          id="perfil"
+          type="text"
+          formControlName="perfil"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          placeholder="Ej: Cliente"
+        />
+        <div
+          class="text-red-500 text-sm mt-1"
+          *ngIf="registrationForm.get('perfil')?.invalid && registrationForm.get('perfil')?.touched"
+        >
+          El perfil es obligatorio.
+        </div>
+      </div>
+
+      <!-- Botón de registro -->
+      <div class="flex items-center justify-center">
+        <button
+          type="submit"
+          class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          [disabled]="registrationForm.invalid"
+        >
+          Registrar
+        </button>
+      </div>
+    </form>
+
+    <!-- Mensajes de éxito o error -->
+    <div *ngIf="errorMessage" class="mt-4 text-red-600 font-semibold text-center">
+      {{ errorMessage }}
+    </div>
+    <div *ngIf="successMessage" class="mt-4 text-green-600 font-semibold text-center">
+      {{ successMessage }}
+    </div>
+  </div>
+</div>

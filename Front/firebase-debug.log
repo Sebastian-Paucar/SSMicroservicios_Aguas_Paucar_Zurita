@@ -1,0 +1,21 @@
+[debug] [2025-02-28T22:09:36.223Z] ----------------------------------------------------------------------
+[debug] [2025-02-28T22:09:36.225Z] Command:       C:\Users\jspau\AppData\Roaming\JetBrains\IntelliJIdea2024.3\node\versions\20.15.0\node.exe C:\Users\jspau\AppData\Roaming\JetBrains\IntelliJIdea2024.3\node\versions\20.15.0\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2025-02-28T22:09:36.225Z] CLI Version:   13.32.0
+[debug] [2025-02-28T22:09:36.225Z] Platform:      win32
+[debug] [2025-02-28T22:09:36.225Z] Node Version:  v20.15.0
+[debug] [2025-02-28T22:09:36.225Z] Time:          Fri Feb 28 2025 17:09:36 GMT-0500 (hora de Ecuador)
+[debug] [2025-02-28T22:09:36.225Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-02-28T22:09:36.230Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-28T22:09:36.230Z] > authorizing via signed-in user (jspaucar1@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\jspau\IdeaProjects\SSMicroservicios_Aguas_Paucar_Zurita\Front
+

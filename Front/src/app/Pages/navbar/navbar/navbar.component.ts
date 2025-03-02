@@ -1,68 +1,80 @@
-import { Component } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { TokenService } from '../../../services/token.service';
+import { Router, NavigationEnd } from '@angular/router';
+import { SearchService } from '../../../services/search.service';
+import { CartService } from '../../../services/cart.service';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-navbar',
-  imports: [
-    FormsModule
-  ],
+  imports: [ FormsModule ],
   templateUrl: './navbar.component.html',
   styles: ``
 })
-export class NavbarComponent {
-
+export class NavbarComponent implements OnInit {
   searchQuery: string = '';
   filteredResults: string[] = [];
   showCart: boolean = false;
   showUserMenu: boolean = false;
-  cartItems = [
-    { name: 'Producto 1', price: 20 },
-    { name: 'Producto 2', price: 35 }
-  ];
+  cartItems: { producto: any; cantidad: number }[] = [];
   isLoggedIn: boolean = false;
+  isCartView: boolean = false;  // Variable para verificar si estamos en el carrito
+
+  constructor(
+    private tokenService: TokenService,
+    private router: Router,
+    private searchService: SearchService,
+    private cartService: CartService
+  ) {
+    this.router.events.pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((event: any) => {
+        this.isCartView = event.url.includes('/carrito'); // Verifica si la URL contiene "/carrito"
+      });
+  }
+
+  ngOnInit(): void {
+    if (this.tokenService.getAccessToken()) {
+      this.isLoggedIn = true;
+      this.showUserMenu = false;
+    }
+
+    this.cartService.cartItems$.subscribe(items => {
+      this.cartItems = items;
+    });
+  }
 
   filterResults() {
-    const mockResults = ['Producto A', 'Producto B', 'Producto C'];
-    this.filteredResults = this.searchQuery ? mockResults.filter(r => r.toLowerCase().includes(this.searchQuery.toLowerCase())) : [];
+    this.searchService.setSearchQuery(this.searchQuery);
   }
 
   selectResult(result: string) {
     this.searchQuery = result;
-    this.filteredResults = [];
-  }
-
-  toggleCart() {
-    this.showCart = !this.showCart;
+    this.searchService.setSearchQuery(result);
   }
 
   goToCart() {
-    alert('Ir al carrito');
-  }
-
-  goToShipments() {
-    alert('Ir a envíos');
-  }
-
-  toggleUserMenu() {
-    this.showUserMenu = !this.showUserMenu;
+    this.router.navigate(['/carrito']).then(r => console.log(r));
   }
 
   login() {
-    this.isLoggedIn = true;
-    this.showUserMenu = false;
+    if (!this.tokenService.getAccessToken()) {
+      this.router.navigate(['/login']).then(r => console.log("Navigate to login"));
+      return;
+    }
   }
 
   logout() {
+    this.router.navigate(['/logout']).then(r => console.log(r));
     this.isLoggedIn = false;
     this.showUserMenu = false;
   }
 
-  goToProfile() {
-    alert('Ir al perfil');
+  navigateTo(url: string) {
+    this.router.navigate([url]);
   }
 
-  goToSettings() {
-    alert('Ir a configuración');
+  goToShipments() {
+
   }
 }
-
