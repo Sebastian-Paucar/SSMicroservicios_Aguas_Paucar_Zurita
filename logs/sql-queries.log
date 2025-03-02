@@ -7370,3 +7370,1690 @@
             on c1_1.id_categoria=c1_0.id_categoria 
     where
         c1_0.id_producto=?
+2025-03-02 12:58:09 - 
+    alter table if exists usuarios.usuario 
+       alter column imagen_perfil set data type TEXT
+2025-03-02 13:01:43 - 
+    alter table if exists usuarios.usuario 
+       alter column imagen_perfil set data type TEXT
+2025-03-02 13:02:40 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 13:02:41 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 13:02:41 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 13:02:41 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 13:02:41 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 13:02:41 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 13:06:36 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 13:06:36 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 13:06:36 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 13:06:36 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 13:06:36 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 13:06:36 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 13:55:56 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 13:55:56 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 13:55:56 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 13:55:56 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 13:55:56 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 13:55:56 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 14:05:36 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 14:05:36 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 14:05:36 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 14:05:36 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 14:05:36 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 14:05:36 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 14:07:26 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 14:07:26 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 14:07:26 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 14:07:26 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 14:07:26 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 14:07:26 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 15:33:15 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 15:33:15 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 15:33:15 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 15:33:15 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 15:33:15 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 15:33:15 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 15:40:40 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 15:40:40 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 15:40:40 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 15:40:40 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 15:40:40 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 15:40:40 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:02:33 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 16:02:33 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:02:33 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:02:33 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:02:33 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:02:33 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:03:26 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 16:03:26 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:03:26 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:03:26 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:03:26 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:03:26 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:03:59 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 16:03:59 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:03:59 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:03:59 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:03:59 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:03:59 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:04:28 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 16:04:28 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:04:28 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:04:28 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:04:28 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:04:28 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:06:40 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 16:06:40 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:06:40 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:06:40 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:06:40 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:06:40 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:06:51 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 16:06:51 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:06:51 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:06:51 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:06:51 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:06:51 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:06:54 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 16:06:54 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:06:54 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:06:54 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:06:54 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:06:54 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:11:22 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 16:11:22 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:11:22 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:11:22 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:11:22 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:11:22 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:14:25 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 16:14:25 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:14:25 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:14:25 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:14:25 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:14:25 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:19:47 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 16:19:47 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:19:47 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:19:47 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:19:47 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:19:47 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:23:04 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 16:23:04 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:23:04 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:23:04 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:23:04 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:23:04 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:24:51 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 16:24:51 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:24:51 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:24:51 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:24:51 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:24:51 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:25:47 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 16:25:47 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:25:47 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:25:47 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:25:47 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:25:47 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:37:38 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 16:37:38 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:37:38 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:37:38 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:37:38 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:37:38 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:38:12 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 16:38:12 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:38:12 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:38:12 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:38:12 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:38:12 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:49:50 - 
+    select
+        p1_0.id_producto,
+        p1_0.cantidad,
+        p1_0.descripcion,
+        p1_0.email_usuario,
+        p1_0.estado,
+        p1_0.imagen_url,
+        p1_0.nombre,
+        p1_0.precio 
+    from
+        productos.productos p1_0
+2025-03-02 16:49:50 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:49:50 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:49:50 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:49:50 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:49:50 - 
+    select
+        c1_0.id_producto,
+        c1_1.id_categoria,
+        c1_1.nombre_categoria 
+    from
+        productos.asocia c1_0 
+    join
+        productos.categorias c1_1 
+            on c1_1.id_categoria=c1_0.id_categoria 
+    where
+        c1_0.id_producto=?
+2025-03-02 16:51:49 - 
+    select
+        u1_0.id_usuario,
+        u1_0.email,
+        u1_0.imagen_perfil,
+        u1_0.nombre,
+        u1_0.password,
+        u1_0.perfil,
+        u1_0.telefono 
+    from
+        usuarios.usuario u1_0 
+    where
+        u1_0.email=?
+2025-03-02 16:51:49 - 
+    select
+        r1_0.id_usuario,
+        r1_1.id,
+        r1_1.role 
+    from
+        usuarios.rol_usuario r1_0 
+    join
+        usuarios.role r1_1 
+            on r1_1.id=r1_0.id_rol 
+    where
+        r1_0.id_usuario=?

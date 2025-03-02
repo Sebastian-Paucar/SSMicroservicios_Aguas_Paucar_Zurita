@@ -75,7 +75,23 @@ public class ProductoService {
 
         return productoRepository.save(producto);
     }
+    public Producto actualizarCantidad(int id, int nuevaCantidad) {
+        Optional<Producto> productoOptional = productoRepository.findById(id);
 
+        if (productoOptional.isEmpty()) {
+            throw new IllegalArgumentException("El producto no existe");
+        }
+
+        Producto producto = productoOptional.get();
+
+        // Validar que la cantidad sea mayor o igual a 0
+        if (nuevaCantidad < 0) {
+            throw new IllegalArgumentException("La cantidad no puede ser negativa");
+        }
+
+        producto.setCantidad(nuevaCantidad);
+        return productoRepository.save(producto);
+    }
     public void eliminar(int id) {
         Optional<Producto> producto = productoRepository.findById(id);
         if (producto.isEmpty()) {

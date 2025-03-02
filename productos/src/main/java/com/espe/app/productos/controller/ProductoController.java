@@ -55,7 +55,6 @@ public class ProductoController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
-
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminarProducto(@PathVariable int id) {
@@ -78,6 +77,15 @@ public class ProductoController {
             return ResponseEntity.ok().body(imagenBytes);
         } catch (IOException e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+    }
+    @PatchMapping("/{id}/cantidad")
+    public ResponseEntity<Producto> actualizarCantidad(@PathVariable int id, @RequestParam int cantidad) {
+        try {
+            Producto productoActualizado = productoService.actualizarCantidad(id, cantidad);
+            return ResponseEntity.ok(productoActualizado);
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
     }
 
