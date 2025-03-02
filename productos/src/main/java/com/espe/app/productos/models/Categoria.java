@@ -22,8 +22,6 @@ public class Categoria {
     @Column(nullable = false)
     private String nombreCategoria;
 
-    @JsonIgnore
-    @ManyToMany(mappedBy = "categorias") // Relación inversa
+    @ManyToMany(mappedBy = "categorias")
     private List<Producto> productos;
 }
-
