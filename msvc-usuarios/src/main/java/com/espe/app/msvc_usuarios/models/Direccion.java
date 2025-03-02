@@ -34,9 +34,9 @@ public class Direccion {
     private String detalle;
 
     @ManyToMany(mappedBy = "direcciones")
-    @JsonIgnore
-    @JsonBackReference
+    @JsonIgnore // <- Evita la serialización de la relación con Usuario
     private Set<Usuario> usuarios = new HashSet<>();
+
 
     public int getIdDireccion() {
         return idDireccion;

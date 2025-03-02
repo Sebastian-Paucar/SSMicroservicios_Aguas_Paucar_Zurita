@@ -1,13 +1,12 @@
 package com.espe.app.productos.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
+import lombok.AllArgsConstructor;
 import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Data
@@ -32,23 +31,21 @@ public class Producto {
     private Integer cantidad;
 
     @Column(nullable = false)
-    private String imagen;
-
-    @Column(nullable = false)
     private String estado;
 
-    @Column(nullable = false)
-    private LocalDate fechaCreacion;
+    @Column(nullable = true)
+    private String imagenUrl;
 
+    // Guardamos el email del usuario en lugar de una relación ManyToOne
     @Column(nullable = false)
-    private LocalDate fechaActualizacion;
+    private String emailUsuario;
 
+    // Relación ManyToMany con Categoría
     @ManyToMany
     @JoinTable(
-            name = "asocia", // Nombre de la tabla de unión
-            joinColumns = @JoinColumn(name = "id_producto"), // Columna FK de Producto
-            inverseJoinColumns = @JoinColumn(name = "id_categoria") // Columna FK de Categoría
+            name = "asocia",
+            joinColumns = @JoinColumn(name = "id_producto"),
+            inverseJoinColumns = @JoinColumn(name = "id_categoria")
     )
-
-    private List<Categoria> categorias; // Relación con Categorías
+    private Set<Categoria> categorias;
 }
