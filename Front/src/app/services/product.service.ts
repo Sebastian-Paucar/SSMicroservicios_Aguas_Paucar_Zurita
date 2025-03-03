@@ -52,17 +52,49 @@ export class ProductService {
   crearProducto(producto: Producto, imagen?: File): Observable<Producto> {
     const formData = new FormData();
     formData.append('producto', new Blob([JSON.stringify(producto)], { type: 'application/json' }));
+
     if (imagen) {
       formData.append('file', imagen);
     }
 
-    const emailUsuario = "juan.perez@example.com";
-      //localStorage.getItem('email'); // Obtener el email del usuario autenticado
+    const emailUsuario = this.getEmailFromJWT(); // Obtener email desde JWT
+    console.log("Email enviado en la petición:", emailUsuario); // ✅ Depuración antes de enviar
+
     formData.append('emailUsuario', emailUsuario || '');
 
     return this.http.post<Producto>(this.apiUrl, formData)
       .pipe(catchError(this.handleError));
   }
+
+
+  private getEmailFromJWT(): string | null {
+    const token = localStorage.getItem('jwt'); // Cambia 'jwt' si usas otra clave
+    if (!token) {
+      console.warn("JWT no encontrado en localStorage");
+      return null;
+    }
+
+    try {
+      const base64Url = token.split('.')[1]; // Extraer el payload
+      if (!base64Url) {
+        console.warn("Formato de JWT inválido");
+        return null;
+      }
+
+      const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+      const jsonPayload = JSON.parse(atob(base64));
+
+      const email = jsonPayload.sub || jsonPayload.username || null;
+      console.log("Email extraído del JWT:", email); // ✅ Depuración
+
+      return email;
+    } catch (error) {
+      console.error("Error al decodificar el JWT", error);
+      return null;
+    }
+  }
+
+
 
   /**
    * Eliminar un producto por su ID.
