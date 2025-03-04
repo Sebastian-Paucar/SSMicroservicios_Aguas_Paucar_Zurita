@@ -33,19 +33,19 @@ public class GatewayConfig {
                                 .requestRateLimiter(c -> c
                                         .setRateLimiter(redisRateLimiter())
                                         .setKeyResolver(ipKeyResolver())))
-                        .uri("http://localhost:8004"))
+                        .uri("http://186.101.180.67:8004"))
                 .route("service2", r -> r.path("/crud/**")
                         .filters(f -> f.stripPrefix(1)
                                 .requestRateLimiter(c -> c
                                         .setRateLimiter(redisRateLimiter())
                                         .setKeyResolver(ipKeyResolver())))
-                        .uri("http://localhost:8002"))
+                        .uri("http://186.101.180.67:8002"))
                 .route("service3", r -> r.path("/carrito/**")
                         .filters(f -> f.stripPrefix(1)
                                 .requestRateLimiter(c -> c
                                         .setRateLimiter(redisRateLimiter())
                                         .setKeyResolver(ipKeyResolver())))
-                        .uri("http://localhost:8003"))
+                        .uri("http://186.101.180.67:8003"))
                 .build();
     }
 
