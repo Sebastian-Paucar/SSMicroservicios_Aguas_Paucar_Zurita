@@ -55,8 +55,7 @@ export class LoginComponent implements OnInit{
 
   onLogin(): void {
     const httpParams = new HttpParams({ fromObject: this.params });
-    const codeUrl = `${this.authorize_uri}${httpParams.toString()}`;
-    location.href = codeUrl; // Redirige al URL de autorización
+    location.href = `${this.authorize_uri}${httpParams.toString()}`; // Redirige al URL de autorización
   }
 
   getToken(): void {

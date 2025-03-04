@@ -15,7 +15,7 @@ import { filter } from 'rxjs/operators';
 export class NavbarComponent implements OnInit {
   searchQuery: string = '';
   filteredResults: string[] = [];
-  showCart: boolean = false;
+
   showUserMenu: boolean = false;
   cartItems: { producto: any; cantidad: number }[] = [];
   isLoggedIn: boolean = false;
@@ -27,10 +27,11 @@ export class NavbarComponent implements OnInit {
     private searchService: SearchService,
     private cartService: CartService
   ) {
-    this.router.events.pipe(filter(event => event instanceof NavigationEnd))
-      .subscribe((event: any) => {
-        this.isCartView = event.url.includes('/carrito'); // Verifica si la URL contiene "/carrito"
-      });
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      this.isCartView = ['/carrito', '/register'].some(path => event.url.includes(path));
+    });
   }
 
   ngOnInit(): void {
@@ -59,7 +60,7 @@ export class NavbarComponent implements OnInit {
 
   login() {
     if (!this.tokenService.getAccessToken()) {
-      this.router.navigate(['/login']).then(r => console.log("Navigate to login"));
+      this.router.navigate(['/login']).then(r => console.log(r));
       return;
     }
   }
@@ -71,7 +72,7 @@ export class NavbarComponent implements OnInit {
   }
 
   navigateTo(url: string) {
-    this.router.navigate([url]);
+    this.router.navigate([url]).then(r => console.log(r));
   }
 
   goToShipments() {

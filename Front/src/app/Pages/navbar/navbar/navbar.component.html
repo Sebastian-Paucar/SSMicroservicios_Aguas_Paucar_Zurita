@@ -55,6 +55,7 @@
       <div class='hidden group-hover:block absolute right-0 bg-white text-black shadow-lg rounded-md w-48 p-2'>
         @if (!isLoggedIn) {
           <button class='w-full text-left p-2 hover:bg-gray-200' (click)='login()'>Iniciar sesión</button>
+          <button class='w-full text-left p-2 hover:bg-gray-200' (click)='navigateTo("/register")'>Registrarse</button>
         } @else {
           <button class='w-full text-left p-2 hover:bg-gray-200' (click)='navigateTo("/profile")'>Perfil</button>
           <button class='w-full text-left p-2 hover:bg-gray-200' (click)='navigateTo("/settings")'>Configuración</button>

@@ -10,7 +10,7 @@
         <div class="flex items-center bg-white p-4 border rounded-lg shadow-lg gap-6">
           <!-- Imagen del producto -->
           <img [src]="productService.obtenerImagenUrl(item.producto.imagenUrl)"
-               class="w-32 h-32 object-cover rounded-md">
+               class="w-32 h-32 object-cover rounded-md" alt="{{ item.producto.nombre }}" />
 
           <!-- Información del producto -->
           <div class="flex-1">

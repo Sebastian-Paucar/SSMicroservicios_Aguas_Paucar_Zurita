@@ -25,6 +25,16 @@ public class GatewayConfig {
         return new RedisRateLimiter(replenishRate, burstCapacity);
     }
 
+    @Value("${service1.url}")
+    private String service1Url;
+
+    @Value("${service2.url}")
+    private String service2Url;
+
+    @Value("${service3.url}")
+    private String service3Url;
+
+
     @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
@@ -33,19 +43,19 @@ public class GatewayConfig {
                                 .requestRateLimiter(c -> c
                                         .setRateLimiter(redisRateLimiter())
                                         .setKeyResolver(ipKeyResolver())))
-                        .uri("http://localhost:8004"))
+                        .uri(service1Url))
                 .route("service2", r -> r.path("/crud/**")
                         .filters(f -> f.stripPrefix(1)
                                 .requestRateLimiter(c -> c
                                         .setRateLimiter(redisRateLimiter())
                                         .setKeyResolver(ipKeyResolver())))
-                        .uri("http://localhost:8002"))
+                        .uri(service2Url))
                 .route("service3", r -> r.path("/carrito/**")
                         .filters(f -> f.stripPrefix(1)
                                 .requestRateLimiter(c -> c
                                         .setRateLimiter(redisRateLimiter())
                                         .setKeyResolver(ipKeyResolver())))
-                        .uri("http://localhost:8003"))
+                        .uri(service3Url))
                 .build();
     }
 
