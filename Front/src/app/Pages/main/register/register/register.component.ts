@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {UsuariosService} from '../../../../services/usuarios.service';
 import {Role, Usuario} from '../../../../interfaces/global.interfaces';
 import {NgIf} from '@angular/common';
 import {Router} from '@angular/router';
+import {NavbarComponent} from '../../../navbar/navbar/navbar.component';
 
 
 
@@ -11,7 +12,8 @@ import {Router} from '@angular/router';
   selector: 'app-register',
   imports: [
     ReactiveFormsModule,
-    NgIf
+    NgIf,
+    NavbarComponent
   ],
   templateUrl: './register.component.html'
 
