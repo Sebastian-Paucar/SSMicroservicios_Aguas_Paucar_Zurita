@@ -27,10 +27,11 @@ export class NavbarComponent implements OnInit {
     private searchService: SearchService,
     private cartService: CartService
   ) {
-    this.router.events.pipe(filter(event => event instanceof NavigationEnd))
-      .subscribe((event: any) => {
-        this.isCartView = event.url.includes('/carrito'); // Verifica si la URL contiene "/carrito"
-      });
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      this.isCartView = ['/carrito', '/register'].some(path => event.url.includes(path));
+    });
   }
 
   ngOnInit(): void {

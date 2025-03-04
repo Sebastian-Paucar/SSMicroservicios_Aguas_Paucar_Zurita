@@ -22,7 +22,8 @@ export const routes: Routes = [
   },
   {
     path:"crearProducto",
-    component:ProductFormComponent
+    component:ProductFormComponent,
+    canActivate:[AuthGuard]
   },
   {
     path: 'carrito',

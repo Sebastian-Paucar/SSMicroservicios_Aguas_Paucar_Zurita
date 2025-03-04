@@ -68,23 +68,31 @@ export class ProductService {
 
 
   private getEmailFromJWT(): string | null {
-    const token = localStorage.getItem('jwt'); // Cambia 'jwt' si usas otra clave
+    const token = localStorage.getItem('access_token'); // Verifica que el token esté guardado con esta clave
     if (!token) {
       console.warn("JWT no encontrado en localStorage");
       return null;
     }
 
     try {
-      const base64Url = token.split('.')[1]; // Extraer el payload
+      const base64Url = token.split('.')[1]; // Parte del JWT que contiene el payload
       if (!base64Url) {
         console.warn("Formato de JWT inválido");
         return null;
       }
 
       const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-      const jsonPayload = JSON.parse(atob(base64));
+      const jsonPayload = JSON.parse(atob(base64)); // Decodifica el payload
 
+      console.log("Payload del JWT:", jsonPayload); // Para ver la estructura del payload
+
+      // Extraemos el correo desde 'sub' o 'username'
       const email = jsonPayload.sub || jsonPayload.username || null;
+
+      if (!email) {
+        console.warn("No se encontró el email en el JWT");
+      }
+
       console.log("Email extraído del JWT:", email); // ✅ Depuración
 
       return email;
