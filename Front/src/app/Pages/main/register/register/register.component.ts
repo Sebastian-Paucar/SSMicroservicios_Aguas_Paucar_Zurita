@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {UsuariosService} from '../../../../services/usuarios.service';
 import {Role, Usuario} from '../../../../interfaces/global.interfaces';
