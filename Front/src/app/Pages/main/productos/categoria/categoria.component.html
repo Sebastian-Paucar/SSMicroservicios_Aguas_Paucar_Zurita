@@ -1,0 +1,35 @@
+<div class="max-w-2xl mx-auto p-4 bg-white shadow-lg rounded-lg">
+  <h2 class="text-2xl font-bold text-center mb-4">Gestión de Categorías y Productos</h2>
+
+  <div class="flex gap-2 mb-4">
+    <input type="text" [(ngModel)]="nuevaCategoria" placeholder="Nueva categoría"
+           class="border p-2 flex-1 rounded-md">
+    <button (click)="agregarCategoria()" class="bg-blue-500 text-white px-4 py-2 rounded-md">Agregar</button>
+  </div>
+
+  <ul class="divide-y divide-gray-300">
+    <li *ngFor="let categoria of categorias" class="flex justify-between items-center py-2">
+      <span class="text-lg">{{ categoria.nombreCategoria }}</span>
+      <button (click)="eliminarCategoria(categoria.idCategoria)"
+              class="bg-red-500 text-white px-3 py-1 rounded-md">Eliminar</button>
+    </li>
+  </ul>
+
+  <div class="mt-6">
+    <h3 class="text-lg font-semibold">Asignar Categorías a un Producto</h3>
+    <select [(ngModel)]="productoSeleccionado" class="border rounded-md w-full p-2 mt-2">
+      <option *ngFor="let producto of productosDisponibles" [value]="producto.idProducto">
+        {{ producto.nombre }}
+      </option>
+    </select>
+    <label class="block text-sm font-medium mt-4">Selecciona Categorías:</label>
+    <select multiple [(ngModel)]="categoriasSeleccionadas" class="border rounded-md w-full p-2">
+      <option *ngFor="let categoria of categorias" [value]="categoria.idCategoria">
+        {{ categoria.nombreCategoria }}
+      </option>
+    </select>
+    <button (click)="asignarCategoriasAProducto()" class="mt-2 bg-green-500 text-white px-3 py-1 rounded-md">
+      Asignar Categorías
+    </button>
+  </div>
+</div>

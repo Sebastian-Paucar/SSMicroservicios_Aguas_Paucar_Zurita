@@ -8,18 +8,18 @@ import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-navbar',
-  imports: [ FormsModule ],
+  imports: [FormsModule],
   templateUrl: './navbar.component.html',
   styles: ``
 })
 export class NavbarComponent implements OnInit {
   searchQuery: string = '';
   filteredResults: string[] = [];
-
   showUserMenu: boolean = false;
   cartItems: { producto: any; cantidad: number }[] = [];
   isLoggedIn: boolean = false;
   isCartView: boolean = false;  // Variable para verificar si estamos en el carrito
+  userRoles: string[] = [];
 
   constructor(
     private tokenService: TokenService,
@@ -30,7 +30,7 @@ export class NavbarComponent implements OnInit {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
-      this.isCartView = ['/carrito', '/register'].some(path => event.url.includes(path));
+      this.isCartView = ['/carrito', '/register','/admin-dashboard'].some(path => event.url.includes(path));
     });
   }
 
@@ -38,6 +38,7 @@ export class NavbarComponent implements OnInit {
     if (this.tokenService.getAccessToken()) {
       this.isLoggedIn = true;
       this.showUserMenu = false;
+      this.userRoles = this.tokenService.getUserRoles();
     }
 
     this.cartService.cartItems$.subscribe(items => {
@@ -76,6 +77,7 @@ export class NavbarComponent implements OnInit {
   }
 
   goToShipments() {
-
+    // Lógica para ir a la vista de envíos
   }
+
 }

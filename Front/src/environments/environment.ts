@@ -2,6 +2,7 @@ export const environment  ={
   production: false,
   endpointUsers: "https://api-gateway-fmc0.onrender.com/crud/",
   endpointFree: "https://api-gateway-fmc0.onrender.com/productos/",
+
   authorize_uri: 'https://securityecovida.onrender.com/oauth2/authorize?',
   client_id : 'client',
   redirect_uri: 'https://ecovida-ten.vercel.app/login',

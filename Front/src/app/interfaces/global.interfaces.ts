@@ -45,6 +45,11 @@ export interface Response<TEntity> {
   ErrorMessage: string;
   SuccessMessage: string;
 }
+export interface Categoria {
+  idCategoria: number;
+  nombreCategoria: string;
+}
+
 export interface Producto {
   idProducto?: number;
   nombre: string;
@@ -52,5 +57,11 @@ export interface Producto {
   precio: number;
   cantidad: number;
   estado: string;
-  imagenUrl?: string; // Aquí se almacena la URL de la imagen en el backend
+  imagenUrl?: string; // URL de la imagen en el backend
+  categoria: Categoria; // Relación con la categoría
+}
+
+export interface Categoria {
+  idCategoria: number;
+  nombreCategoria: string;
 }

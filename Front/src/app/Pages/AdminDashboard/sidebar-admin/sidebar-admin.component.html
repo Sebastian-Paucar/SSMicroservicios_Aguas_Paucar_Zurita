@@ -1,0 +1,12 @@
+<aside class="w-64 bg-gray-900 text-white h-screen p-4 fixed">
+  <h2 class="text-xl font-bold mb-4">Menú</h2>
+  <ul>
+    @for (link of menuLinks; track link) {
+      <li class="mb-2">
+        <a [routerLink]="link.path" class="block p-2 rounded hover:bg-gray-700">{{ link.name }}</a>
+      </li>
+    }
+  </ul>
+
+
+</aside>

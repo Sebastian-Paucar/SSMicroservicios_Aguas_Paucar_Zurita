@@ -27,6 +27,7 @@
 
 
   <div class='flex items-center gap-4'>
+    @if (userRoles.includes('ROLE_ADMIN')) {
     <div class='relative group'>
       <button>🛒 ({{ cartItems.length }})</button>
       <div class='hidden group-hover:block absolute right-0 bg-white text-black shadow-lg rounded-md w-64 p-4'>
@@ -46,10 +47,10 @@
         }
       </div>
     </div>
-
     <div class='relative group'>
       <button (click)='goToShipments()'>📦</button>
     </div>
+    }
     <div class='relative group'>
       <button>👤</button>
       <div class='hidden group-hover:block absolute right-0 bg-white text-black shadow-lg rounded-md w-48 p-2'>
@@ -58,7 +59,9 @@
           <button class='w-full text-left p-2 hover:bg-gray-200' (click)='navigateTo("/register")'>Registrarse</button>
         } @else {
           <button class='w-full text-left p-2 hover:bg-gray-200' (click)='navigateTo("/profile")'>Perfil</button>
-          <button class='w-full text-left p-2 hover:bg-gray-200' (click)='navigateTo("/settings")'>Configuración</button>
+          @if (userRoles.includes('ROLE_ADMIN')) {
+            <button class='w-full text-left p-2 hover:bg-gray-200' (click)="navigateTo('/admin-dashboard')">Admin Panel</button>
+          }
           <button class='w-full text-left p-2 hover:bg-red-500 text-black' (click)='logout()'>Cerrar sesión</button>
         }
       </div>
