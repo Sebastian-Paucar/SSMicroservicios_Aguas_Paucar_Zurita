@@ -1,6 +1,5 @@
 package com.espe.app.productos.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -33,7 +32,7 @@ public class Producto {
     @Column(nullable = false)
     private String estado;
 
-    @Column(nullable = true)
+    @Column()
     private String imagenUrl;
 
     // Guardamos el email del usuario en lugar de una relación ManyToOne

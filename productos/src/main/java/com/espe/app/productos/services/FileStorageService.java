@@ -11,14 +11,14 @@ import java.util.UUID;
 
 @Service
 public class FileStorageService {
-    private final String UPLOAD_DIR = "uploads/";
 
     public String saveFile(MultipartFile file) throws IOException {
         if (file.isEmpty()) {
             throw new IOException("El archivo está vacío");
         }
 
-        String fileName = UUID.randomUUID().toString() + "_" + file.getOriginalFilename();
+        String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
+        String UPLOAD_DIR = "uploads/";
         Path uploadPath = Paths.get(UPLOAD_DIR);
 
         if (!Files.exists(uploadPath)) {

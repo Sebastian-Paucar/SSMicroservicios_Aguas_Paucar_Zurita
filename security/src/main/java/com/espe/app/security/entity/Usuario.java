@@ -19,7 +19,7 @@ public class Usuario {
 
 
     public String getPassword() {
-        return password != null ? new String(password) : null;
+        return password != null ? password : null;
     }
 
     public Set<Rol> getRoles() {

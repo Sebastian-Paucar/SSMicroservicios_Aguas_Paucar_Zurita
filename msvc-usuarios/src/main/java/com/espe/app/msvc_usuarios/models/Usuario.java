@@ -1,7 +1,7 @@
 package com.espe.app.msvc_usuarios.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -85,14 +85,6 @@ public class Usuario implements UserDetails {
     public String getPassword() { return password; }
     @Override
     public String getUsername() { return email; }
-    @Override
-    public boolean isAccountNonExpired() { return true; }
-    @Override
-    public boolean isAccountNonLocked() { return true; }
-    @Override
-    public boolean isCredentialsNonExpired() { return true; }
-    @Override
-    public boolean isEnabled() { return true; }
 
     // Getters y Setters
 

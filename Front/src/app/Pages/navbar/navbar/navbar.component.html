@@ -27,7 +27,7 @@
 
 
   <div class='flex items-center gap-4'>
-    @if (userRoles.includes('ROLE_ADMIN')) {
+
     <div class='relative group'>
       <button>🛒 ({{ cartItems.length }})</button>
       <div class='hidden group-hover:block absolute right-0 bg-white text-black shadow-lg rounded-md w-64 p-4'>
@@ -50,7 +50,7 @@
     <div class='relative group'>
       <button (click)='goToShipments()'>📦</button>
     </div>
-    }
+
     <div class='relative group'>
       <button>👤</button>
       <div class='hidden group-hover:block absolute right-0 bg-white text-black shadow-lg rounded-md w-48 p-2'>

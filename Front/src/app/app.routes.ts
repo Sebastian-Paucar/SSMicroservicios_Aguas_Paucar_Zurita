@@ -20,8 +20,8 @@ export const routes: Routes = [
   {
     path: 'admin-dashboard',
     component: AdminDashboardComponent,
-    // canActivate: [AuthGuard],
-    // data: { roles: ['ROLE_ADMIN'] },
+     canActivate: [AuthGuard],
+     data: { roles: ['ROLE_ADMIN'] },
     children: [
       { path: '', data: { title: 'Dashboard' } },
       { path: 'crearProducto', component: ProductFormComponent, data: { title: 'Crear Producto' } },

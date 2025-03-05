@@ -61,7 +61,7 @@ public class ProductoService {
 
         // Si hay archivo, guardarlo en storage y actualizar la URL
         if (file != null && !file.isEmpty()) {
-            String nombreArchivo = UUID.randomUUID().toString() + "_" + file.getOriginalFilename();
+            String nombreArchivo = UUID.randomUUID() + "_" + file.getOriginalFilename();
             String rutaArchivo = CARPETA_IMAGENES + nombreArchivo;
 
             File directorio = new File(CARPETA_IMAGENES);

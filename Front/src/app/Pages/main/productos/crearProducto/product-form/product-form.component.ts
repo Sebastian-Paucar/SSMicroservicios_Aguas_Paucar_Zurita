@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { DomSanitizer } from '@angular/platform-browser';
 import { ProductService } from '../../../../../services/product.service';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
-import {CategoriaComponent} from '../../categoria/categoria.component';
+
 
 
 

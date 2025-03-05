@@ -49,19 +49,13 @@ public class UsuarioController {
     @PreAuthorize("hasAnyAuthority('ROLE_USER', 'ROLE_ADMIN')")
     public ResponseEntity<Usuario> buscarPorNombre(@PathVariable String name) {
         Optional<Usuario> usuarioOptional = usuarioService.buscarPorNombre(name);
-        if (usuarioOptional.isPresent()) {
-            return new ResponseEntity<>(usuarioOptional.get(), HttpStatus.OK);
-        }
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return usuarioOptional.map(usuario -> new ResponseEntity<>(usuario, HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
     @GetMapping("/email/{email}")
     public ResponseEntity<Usuario> buscarPorEmail(@PathVariable String email) {
         Optional<Usuario> usuarioOptional = usuarioService.porEmail(email);
-        if (usuarioOptional.isPresent()) {
-            return new ResponseEntity<>(usuarioOptional.get(), HttpStatus.OK);
-        }
-        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        return usuarioOptional.map(usuario -> new ResponseEntity<>(usuario, HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
 

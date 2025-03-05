@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {environment} from '../../environments/environment';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {catchError, Observable, throwError} from 'rxjs';
-import {Categoria, Producto} from '../interfaces/global.interfaces';
+import {Producto} from '../interfaces/global.interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -84,16 +84,12 @@ export class ProductService {
       const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
       const jsonPayload = JSON.parse(atob(base64)); // Decodifica el payload
 
-      console.log("Payload del JWT:", jsonPayload); // Para ver la estructura del payload
-
       // Extraemos el correo desde 'sub' o 'username'
       const email = jsonPayload.sub || jsonPayload.username || null;
 
       if (!email) {
         console.warn("No se encontró el email en el JWT");
       }
-
-      console.log("Email extraído del JWT:", email); // ✅ Depuración
 
       return email;
     } catch (error) {
