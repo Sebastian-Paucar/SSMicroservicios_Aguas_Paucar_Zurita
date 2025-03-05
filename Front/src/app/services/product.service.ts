@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {environment} from '../../environments/environment';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {catchError, Observable, throwError} from 'rxjs';
-import {Producto} from '../interfaces/global.interfaces';
+import {Categoria, Producto} from '../interfaces/global.interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -102,6 +102,9 @@ export class ProductService {
     }
   }
 
+  asignarCategorias(productoId: number, categorias: number[]): Observable<any> {
+    return this.http.patch(`${this.apiUrl}/${productoId}/categorias`, { categorias }, { headers: this.getAuthHeaders() });
+  }
 
 
   /**
@@ -135,5 +138,8 @@ export class ProductService {
       .pipe(catchError(this.handleError));
   }
 
-
+  asignarCategoriasAProducto(idProducto: number, categoriasIds: number[]): Observable<Producto> {
+    return this.http.patch<Producto>(`${this.apiUrl}/${idProducto}/categorias`, categoriasIds, { headers: this.getAuthHeaders() })
+      .pipe(catchError(this.handleError));
+  }
 }

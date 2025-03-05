@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {environment} from '../../environments/environment';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {catchError, Observable, throwError} from 'rxjs';
+import {TokenService} from './token.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ import {catchError, Observable, throwError} from 'rxjs';
 export class AuthService {
 
   token_url=environment.token_url;
-  constructor(private  http: HttpClient) { }
+  constructor(private  http: HttpClient, private tokenService: TokenService) { }
 
   public getToken(code: string): Observable<any> {
     let body = new URLSearchParams();
@@ -57,4 +58,21 @@ export class AuthService {
     );
   }
 
+  getUserRoles(): string[] {
+    return this.tokenService.getUserRoles();
+  }
+  hasAnyRole(roles: string[]): boolean {
+    return this.getUserRoles().some(role => roles.includes(role));
+  }
+  hasRole(role: string): boolean {
+    return this.getUserRoles().includes(role);
+  }
+
+  isAdmin(): boolean {
+    return this.hasRole('ROLE_ADMIN');
+  }
+
+  isUser(): boolean {
+    return this.hasRole('ROLE_USER');
+  }
 }

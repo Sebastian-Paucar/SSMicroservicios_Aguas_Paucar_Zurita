@@ -89,4 +89,5 @@ export class UsuariosService {
       .delete<Usuario>(`${this.apiUrl}/${id}`, { headers: this.getAuthHeaders() })
       .pipe(catchError(this.handleError));
   }
+
 }
