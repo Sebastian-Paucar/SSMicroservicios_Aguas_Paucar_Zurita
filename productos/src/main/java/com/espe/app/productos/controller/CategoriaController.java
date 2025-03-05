@@ -35,7 +35,7 @@ public class CategoriaController {
     }
 
     @PostMapping
-    @PreAuthorize("hasRole('ADMIN')") // Solo administradores pueden crear categorías
+    @PreAuthorize("hasRole('ROLE_ADMIN')") // Solo administradores pueden crear categorías
     public ResponseEntity<Categoria> crearCategoria(@Valid @RequestBody Categoria categoria) {
         try {
             Categoria nuevaCategoria = categoriaService.guardar(categoria);
